@@ -1,4 +1,5 @@
-import { Check, Clock, Shield, Star } from "lucide-react";
+import Image from "next/image";
+import { Check, Phone, Mail, Clock, Shield, Star } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,126 +8,108 @@ export const metadata: Metadata = {
     "Book your professional real estate media session — photography, drone, video, and 3D virtual tours in Victorville, CA.",
 };
 
-const trustPoints = [
-  {
-    icon: Clock,
-    title: "24-48 Hour Turnaround",
-    description: "Get your photos fast so your listing hits the market on time.",
-  },
-  {
-    icon: Shield,
-    title: "Satisfaction Guaranteed",
-    description: "We don't stop until you're 100% happy with the results.",
-  },
-  {
-    icon: Star,
-    title: "5-Star Rated",
-    description: "Trusted by top realtors across the High Desert.",
-  },
-];
-
 const included = [
   "Professional HDR photography",
-  "Drone & aerial available",
-  "Cinematic video walkthroughs",
-  "3D virtual tours",
-  "Fast turnaround",
-  "Online gallery delivery",
+  "FREE Virtual Twilight included",
+  "Your own Property Website",
+  "Ready-to-post Social Media Banners",
+  "Custom-designed Marketing Flyer",
+  "Branded QR Code for your listing",
+  "Fast 24-48 hour turnaround",
+  "Full media access for 1 year in your personal portal",
 ];
 
 export default function BookPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream pt-28 pb-16 md:pt-32 md:pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      {/* Hero with Photo */}
+      <section className="relative min-h-[40vh] flex items-end overflow-hidden">
+        <Image
+          src="/photos/front-exterior.jpg"
+          alt="Book a Shoot"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-12">
           <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-4">
             Book Your Shoot
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brown">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Ready to Elevate Your Listing?
           </h1>
-          <p className="mt-4 text-lg text-gray-body max-w-2xl mx-auto">
-            Fill out the form below to schedule your shoot. Select your
-            services, choose your date, and we&apos;ll handle the rest.
+          <p className="mt-4 text-lg text-gray-200 max-w-2xl">
+            Select your services, choose your date, and we&apos;ll handle the
+            rest.
           </p>
         </div>
       </section>
 
-      {/* Form + Sidebar */}
+      {/* Form Section */}
       <section className="py-16 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Aryeo Form Embed */}
-            <div className="lg:col-span-2">
-              <div className="rounded-2xl overflow-hidden border border-cream-dark bg-cream shadow-sm">
-                <iframe
-                  src="https://listings.framethevision.media/order-forms/019abda4-913d-73ad-be87-fdbc4d343a0c"
-                  className="w-full border-0"
-                  style={{ minHeight: "900px" }}
-                  title="Book a Shoot — Frame The Vision"
-                  allow="payment"
-                />
-              </div>
-            </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          {/* Aryeo Form */}
+          <div className="rounded-2xl overflow-hidden border border-cream-dark shadow-sm">
+            <iframe
+              src="https://listings.framethevision.media/order-forms/019abda4-913d-73ad-be87-fdbc4d343a0c"
+              className="w-full border-0"
+              style={{ minHeight: "900px" }}
+              title="Book a Shoot — Frame The Vision"
+              allow="payment"
+            />
+          </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              {/* What's Included */}
-              <div className="rounded-2xl bg-cream border border-cream-dark p-8">
-                <h3 className="text-lg font-bold text-brown mb-6">
-                  What&apos;s Included
-                </h3>
-                <ul className="space-y-3">
-                  {included.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-gold" />
-                      </div>
-                      <span className="text-sm text-brown">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Trust Points */}
-              {trustPoints.map((point) => (
-                <div
-                  key={point.title}
-                  className="flex items-start gap-4 rounded-2xl bg-cream border border-cream-dark p-6"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <point.icon className="w-5 h-5 text-gold" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-brown">{point.title}</p>
-                    <p className="text-sm text-gray-body mt-1">
-                      {point.description}
-                    </p>
-                  </div>
+          {/* Every Shoot Includes */}
+          <div className="mt-12">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gold mb-6 text-center">
+              Every Shoot Includes
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {included.map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-gold flex-shrink-0" />
+                  <span className="text-sm text-brown">{item}</span>
                 </div>
               ))}
+            </div>
+          </div>
 
-              {/* Contact */}
-              <div className="rounded-2xl bg-gold/10 border border-gold/20 p-6 text-center">
-                <p className="font-semibold text-brown">Need Help Booking?</p>
-                <p className="text-sm text-gray-body mt-2">
-                  Call us at{" "}
-                  <a
-                    href="tel:+17606462321"
-                    className="text-gold font-medium hover:text-gold-dark"
-                  >
-                    (760) 646-2321
-                  </a>
-                </p>
+          {/* Trust Points */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-start gap-4 rounded-2xl border border-cream-dark p-6">
+              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-5 h-5 text-gold" />
+              </div>
+              <div>
+                <p className="font-semibold text-brown">Satisfaction Guaranteed</p>
                 <p className="text-sm text-gray-body mt-1">
-                  or email{" "}
-                  <a
-                    href="mailto:framethevision1@gmail.com"
-                    className="text-gold font-medium hover:text-gold-dark"
-                  >
-                    framethevision1@gmail.com
-                  </a>
+                  We don&apos;t stop until you&apos;re 100% happy with the results.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-2xl border border-cream-dark p-6">
+              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <Star className="w-5 h-5 text-gold" />
+              </div>
+              <div>
+                <p className="font-semibold text-brown">5-Star Rated</p>
+                <p className="text-sm text-gray-body mt-1">
+                  Trusted by top realtors across the High Desert.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-2xl border border-cream-dark p-6">
+              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <Clock className="w-5 h-5 text-gold" />
+              </div>
+              <div>
+                <p className="font-semibold text-brown">Need Help Booking?</p>
+                <p className="text-sm text-gray-body mt-1">
+                  Call{" "}
+                  <a href="tel:+17606462321" className="text-gold font-medium hover:text-gold-dark">(760) 646-2321</a>
+                  {" "}or email{" "}
+                  <a href="mailto:framethevision1@gmail.com" className="text-gold font-medium hover:text-gold-dark">framethevision1@gmail.com</a>
                 </p>
               </div>
             </div>
