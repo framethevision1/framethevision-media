@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const included = [
   "Professional HDR photography",
-  "FREE Virtual Twilight included",
+  "FREE Virtual Twilight & Staging included",
   "Your own Property Website",
   "Ready-to-post Social Media Banners",
   "Custom-designed Marketing Flyer",

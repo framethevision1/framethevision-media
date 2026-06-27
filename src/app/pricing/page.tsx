@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Check, ArrowRight, Camera, Plane, Map, Image } from "lucide-react";
+import Image from "next/image";
+import { Check, ArrowRight, Camera, Plane, Map, Image as ImageIcon, Video } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import type { Metadata } from "next";
 
@@ -37,7 +38,7 @@ const packages = [
     name: "Premium",
     price: 350,
     description: "The full package — photos, drone, and a detailed floor plan.",
-    icon: Image,
+    icon: ImageIcon,
     features: [
       "Standard photos",
       "Aerial drone photos",
@@ -62,14 +63,14 @@ const packages = [
 ];
 
 const addOns = [
-  { name: "Virtual Twilight", price: 15 },
-  { name: "Virtual Staging", price: 30 },
+  { name: "Virtual Twilight", price: 15, href: "/addons/virtual-twilight" },
+  { name: "Virtual Staging", price: 30, href: "/addons/virtual-staging" },
   { name: "2D Floor Plan", price: 75 },
-  { name: "3D Virtual Tour", price: 125, note: "Only $85 when added to any package" },
+  { name: "3D Virtual Tour", price: 125, note: "SAVE $40 — Only $85 when added to any package!" },
 ];
 
 const videoServices = [
-  { name: "Land 1 Minute Outlined Video", price: 225 },
+  { name: "Land 1 Minute Outlined Video", price: 225, note: "SAVE $50 — Only $175 when bundled with the Land package!" },
   { name: "Standard MLS Property Video", price: 275 },
   { name: "Key Delivery Video", price: 325 },
   { name: "Agent Branded Video", price: 350 },
@@ -78,29 +79,36 @@ const videoServices = [
 export default function PricingPage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-6">
-              Pricing
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brown">
-              Simple, Transparent Pricing
-            </h1>
-            <p className="mt-6 text-lg text-gray-body leading-relaxed">
-              Choose the package that fits your listing. No hidden fees, no
-              surprises — just professional media that sells homes faster.
-            </p>
-            <p className="mt-3 text-sm text-gray-body">
-              All pricing is based on a radius of 30 miles from 92395.
-              Properties outside this area may incur a travel fee.
-            </p>
-          </div>
+      {/* Hero with Photo */}
+      <section className="relative min-h-[40vh] flex items-end overflow-hidden">
+        <Image
+          src="/photos/kitchen.jpg"
+          alt="Pricing"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-12">
+          <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-4">
+            Pricing
+          </p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            Simple, Transparent Pricing
+          </h1>
+          <p className="mt-4 text-lg text-gray-200 max-w-2xl">
+            Choose the package that fits your listing. No hidden fees, no
+            surprises — just professional media that sells homes faster.
+          </p>
+          <p className="mt-3 text-sm text-gray-300">
+            All pricing is based on a radius of 30 miles from 92395.
+            Properties outside this area may incur a travel fee.
+          </p>
         </div>
       </section>
 
       {/* Packages */}
-      <section className="py-24 bg-gray-bg">
+      <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             tag="Packages"
@@ -111,10 +119,10 @@ export default function PricingPage() {
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`relative bg-cream rounded-2xl p-8 ${
+                className={`relative rounded-2xl p-8 border transition-all flex flex-col ${
                   pkg.popular
-                    ? "ring-2 ring-gold shadow-lg scale-[1.02]"
-                    : "shadow-sm"
+                    ? "border-gold shadow-lg scale-[1.02] bg-cream"
+                    : "border-cream-dark bg-cream"
                 }`}
               >
                 {pkg.popular && (
@@ -132,7 +140,7 @@ export default function PricingPage() {
                     ${pkg.price}
                   </span>
                 </p>
-                <ul className="mt-8 space-y-3">
+                <ul className="mt-8 space-y-3 flex-1">
                   {pkg.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-sm">
                       <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
@@ -145,7 +153,7 @@ export default function PricingPage() {
                   className={`mt-8 w-full inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${
                     pkg.popular
                       ? "bg-gold text-white hover:bg-gold-dark"
-                      : "bg-cream text-brown hover:bg-cream-dark"
+                      : "border border-cream-dark text-brown hover:border-gold hover:text-gold"
                   }`}
                 >
                   Book {pkg.name}
@@ -157,58 +165,90 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Add-Ons */}
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            tag="A La Carte"
-            title="Add-Ons"
-            description="Enhance any package with these individual services."
-          />
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {addOns.map((addon) => (
-              <div
-                key={addon.name}
-                className="p-6 rounded-2xl bg-gray-bg"
-              >
-                <p className="font-medium text-brown">{addon.name}</p>
-                <p className="text-gold font-bold text-xl mt-1">
-                  ${addon.price}
-                </p>
-                {addon.note && (
-                  <p className="mt-2 text-xs text-green-600 font-medium">
-                    {addon.note}
-                  </p>
-                )}
+      {/* Add-Ons + Video Side by Side */}
+      <section className="relative py-24 overflow-hidden">
+        <Image
+          src="/photos/living-room.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Add-Ons */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
+                A La Carte
+              </p>
+              <h2 className="text-3xl font-bold text-white mb-8">Add-Ons</h2>
+              <div className="space-y-4">
+                {addOns.map((addon) => {
+                  const inner = (
+                    <>
+                      <div>
+                        <p className="font-medium text-white">{addon.name}</p>
+                        {addon.note && (
+                          <p className="text-xs text-green-400 mt-1">{addon.note}</p>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3 flex-shrink-0">
+                        <p className="text-gold font-bold text-xl">${addon.price}</p>
+                        {addon.href && <ArrowRight className="w-4 h-4 text-gold" />}
+                      </div>
+                    </>
+                  );
+                  return addon.href ? (
+                    <Link
+                      key={addon.name}
+                      href={addon.href}
+                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                    >
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div
+                      key={addon.name}
+                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm"
+                    >
+                      {inner}
+                    </div>
+                  );
+                })}
               </div>
-            ))}
+            </div>
+
+            {/* Video Services */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
+                Video
+              </p>
+              <h2 className="text-3xl font-bold text-white mb-8">Video Services</h2>
+              <div className="space-y-4">
+                {videoServices.map((vs) => (
+                  <div
+                    key={vs.name}
+                    className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm"
+                  >
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <Video className="w-5 h-5 text-gold flex-shrink-0" />
+                        <p className="font-medium text-white">{vs.name}</p>
+                      </div>
+                      {vs.note && (
+                        <p className="text-xs text-green-400 mt-1 ml-8">{vs.note}</p>
+                      )}
+                    </div>
+                    <p className="text-gold font-bold text-xl flex-shrink-0">${vs.price}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Video Services */}
-      <section className="py-24 bg-gray-bg">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            tag="Video"
-            title="Video Services"
-            description="Professional video content to bring your listings to life."
-          />
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {videoServices.map((vs) => (
-              <div
-                key={vs.name}
-                className="bg-cream p-6 rounded-2xl shadow-sm"
-              >
-                <p className="font-medium text-brown">{vs.name}</p>
-                <p className="text-gold font-bold text-xl mt-1">${vs.price}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Custom Quote */}
+      {/* Custom Quote CTA */}
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-brown">
@@ -226,6 +266,12 @@ export default function PricingPage() {
               Contact Us
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
+            <a
+              href="/book"
+              className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
+            >
+              Book Now
+            </a>
           </div>
         </div>
       </section>
