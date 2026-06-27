@@ -11,7 +11,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { name: "About", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Our Work", href: "/services/photography" },
   { name: "Pricing", href: "/pricing" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },

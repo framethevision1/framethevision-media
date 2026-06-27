@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Moon, Sofa } from "lucide-react";
 import { servicesData, type ServiceSlug } from "@/lib/services-data";
 import SectionHeading from "@/components/SectionHeading";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 export function generateStaticParams() {
   return Object.keys(servicesData).map((slug) => ({ slug }));
@@ -88,52 +89,27 @@ export default async function ServicePage({
 
       {/* What's Included */}
       <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <SectionHeading
-                tag="What's Included"
-                title="Everything You Get"
-                center={false}
-              />
-              <ul className="mt-8 space-y-4">
-                {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-gold" />
-                    </div>
-                    <span className="text-brown">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-10">
-                <a
-                  href="/book"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  Book Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <SectionHeading
+            tag="What's Included"
+            title="Everything You Get"
+          />
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {service.features.map((feature, i) => (
+              <div key={i} className="flex items-center gap-3 text-left">
+                <Check className="w-5 h-5 text-gold flex-shrink-0" />
+                <span className="text-brown">{feature}</span>
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {service.gallery.slice(0, 4).map((img, i) => (
-                <div
-                  key={i}
-                  className={`rounded-2xl overflow-hidden ${
-                    i === 0 ? "col-span-2 aspect-[16/9]" : "aspect-square"
-                  }`}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <a
+              href="/book"
+              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
+            >
+              Book Now
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
@@ -164,6 +140,68 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* Enhance Your Shoot - Photography only */}
+      {slug === "photography" && (
+        <section className="py-24 bg-cream">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              tag="Enhance Your Shoot"
+              title="Take Your Photos Even Further"
+              description="Every photo shoot includes 1 free virtual twilight and 1 free virtual staging. Need more? Add them for a small fee."
+            />
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <BeforeAfterSlider
+                  beforeSrc="/photos/front-exterior.jpg"
+                  afterSrc="/photos/front-exterior.jpg"
+                  beforeLabel="Daytime"
+                  afterLabel="Virtual Twilight"
+                />
+                <Link href="/addons/virtual-twilight" className="block p-6 bg-cream border border-cream-dark border-t-0 rounded-b-2xl group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Moon className="w-5 h-5 text-gold" />
+                    <h3 className="text-lg font-bold text-brown">Virtual Twilight</h3>
+                    <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
+                      1 FREE with every shoot
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-body">
+                    Transform any daytime exterior into a stunning twilight shot. Additional images just $15 each.
+                  </p>
+                  <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                    See Examples <ArrowRight className="ml-1 w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+
+              <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <BeforeAfterSlider
+                  beforeSrc="/photos/bedroom-2.jpg"
+                  afterSrc="/photos/bedroom.jpg"
+                  beforeLabel="Empty"
+                  afterLabel="Staged"
+                />
+                <Link href="/addons/virtual-staging" className="block p-6 bg-cream border border-cream-dark border-t-0 rounded-b-2xl group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Sofa className="w-5 h-5 text-gold" />
+                    <h3 className="text-lg font-bold text-brown">Virtual Staging</h3>
+                    <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
+                      1 FREE with every shoot
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-body">
+                    Turn empty rooms into beautifully furnished spaces. Additional rooms just $30 each.
+                  </p>
+                  <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                    See Examples <ArrowRight className="ml-1 w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Stats */}
       <section className="relative py-24 overflow-hidden">

@@ -119,10 +119,10 @@ export default function PricingPage() {
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`relative rounded-2xl p-8 border transition-all flex flex-col ${
+                className={`relative rounded-2xl p-8 border-2 transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl ${
                   pkg.popular
                     ? "border-gold shadow-lg scale-[1.02] bg-cream"
-                    : "border-cream-dark bg-cream"
+                    : "border-gold/30 bg-cream"
                 }`}
               >
                 {pkg.popular && (
@@ -153,7 +153,7 @@ export default function PricingPage() {
                   className={`mt-8 w-full inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${
                     pkg.popular
                       ? "bg-gold text-white hover:bg-gold-dark"
-                      : "border border-cream-dark text-brown hover:border-gold hover:text-gold"
+                      : "bg-gold text-white hover:bg-gold-dark"
                   }`}
                 >
                   Book {pkg.name}
@@ -202,14 +202,14 @@ export default function PricingPage() {
                     <Link
                       key={addon.name}
                       href={addon.href}
-                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
                     >
                       {inner}
                     </Link>
                   ) : (
                     <div
                       key={addon.name}
-                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm"
+                      className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
                     >
                       {inner}
                     </div>
@@ -228,7 +228,7 @@ export default function PricingPage() {
                 {videoServices.map((vs) => (
                   <div
                     key={vs.name}
-                    className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm"
+                    className="flex items-center justify-between p-5 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
                   >
                     <div>
                       <div className="flex items-center gap-3">

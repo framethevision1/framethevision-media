@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
+import ServicesDropdownButton from "@/components/ServicesDropdownButton";
 
 const services = [
   {
@@ -145,12 +146,9 @@ export default function Home() {
                 Book a Shoot
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <Link
-                href="/portfolio"
+              <ServicesDropdownButton
                 className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-8 py-4 text-base font-semibold text-white hover:border-gold hover:text-gold transition-colors"
-              >
-                View Portfolio
-              </Link>
+              />
             </div>
           </div>
         </div>
@@ -292,10 +290,10 @@ export default function Home() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/portfolio"
+              href="/services/photography"
               className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-dark transition-colors"
             >
-              View Full Portfolio <ArrowRight className="w-5 h-5" />
+              See More of Our Work <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

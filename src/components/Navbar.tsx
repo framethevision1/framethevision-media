@@ -14,7 +14,6 @@ const services = [
 ];
 
 const navLinks: { name: string; href: string; external?: boolean }[] = [
-  { name: "Portfolio", href: "/portfolio" },
   { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
   { name: "FAQ", href: "/faq" },
@@ -64,7 +63,7 @@ export default function Navbar() {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button className="flex items-center gap-1 text-sm font-medium hover:text-gold transition-colors py-2">
-                Services <ChevronDown className="w-4 h-4" />
+                Services & Portfolio <ChevronDown className="w-4 h-4" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2">
@@ -127,7 +126,7 @@ export default function Navbar() {
         <div className="lg:hidden border-t border-cream-dark bg-cream text-brown">
           <div className="px-4 py-4 space-y-1">
             <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-gray-body">
-              Services
+              Services & Portfolio
             </p>
             {services.map((s) => (
               <Link
