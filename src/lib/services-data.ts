@@ -1,0 +1,135 @@
+import { Camera, Video, Plane, Box } from "lucide-react";
+
+export const servicesData = {
+  photography: {
+    icon: Camera,
+    title: "Real Estate Photography",
+    tagline: "Capture Every Detail",
+    description:
+      "Professional HDR photography that showcases properties in their best light. Every shot is carefully composed, lit, and edited to highlight the unique features that make a listing stand out.",
+    heroImage: "/photos/living-room.jpg",
+    heroStat: { value: "32%", label: "Faster Sales with Pro Photos", source: "Redfin / MLS" },
+    features: [
+      "Professional HDR interior & exterior photography",
+      "Wide-angle lens coverage of every room",
+      "Professional editing & color correction",
+      "High-resolution files for print & digital",
+      "24-48 hour turnaround",
+    ],
+    gallery: [
+      { src: "/photos/living-room.jpg", alt: "Living Room" },
+      { src: "/photos/kitchen.jpg", alt: "Kitchen" },
+      { src: "/photos/bedroom.jpg", alt: "Master Bedroom" },
+      { src: "/photos/front-exterior.jpg", alt: "Front Exterior" },
+      { src: "/photos/kitchen-living.jpg", alt: "Kitchen & Living" },
+      { src: "/photos/backyard.jpg", alt: "Backyard" },
+      { src: "/photos/entrance-room.jpg", alt: "Entrance Room" },
+      { src: "/photos/master-bath.jpg", alt: "Master Bathroom" },
+      { src: "/photos/living-room-2.jpg", alt: "Living Room" },
+      { src: "/photos/bedroom-2.jpg", alt: "Bedroom" },
+      { src: "/photos/front-entrance.jpg", alt: "Front Entrance" },
+      { src: "/photos/right-side.jpg", alt: "Right Side" },
+    ],
+    stats: [
+      { highlight: "32% faster", text: "homes sell with professional photos", source: "Redfin / MLS" },
+      { highlight: "$11,200+", text: "more in sale price on average", source: "PhotoUp / NAR" },
+      { highlight: "118%", text: "more online views for listings", source: "Redfin" },
+      { highlight: "2x", text: "commission income for agents using pro photos", source: "NAR" },
+    ],
+  },
+  video: {
+    icon: Video,
+    title: "Video Walkthroughs",
+    tagline: "Tell the Story",
+    description:
+      "Cinematic property tour videos that engage buyers from the first frame. Professionally shot and edited with music, transitions, and motion graphics that bring listings to life.",
+    heroImage: "/photos/kitchen-living.jpg",
+    heroStat: { value: "403%", label: "More Inquiries with Video", source: "Domain.com.au" },
+    features: [
+      "Cinematic property walkthrough tours",
+      "Professional editing with licensed music",
+      "Smooth stabilized footage",
+      "Motion graphics & text overlays",
+      "Social media optimized cuts (Reels/TikTok)",
+      "MLS & YouTube ready formats",
+    ],
+    gallery: [
+      { src: "/photos/living-room.jpg", alt: "Living Room Tour" },
+      { src: "/photos/kitchen-living.jpg", alt: "Kitchen & Living Area" },
+      { src: "/photos/bedroom.jpg", alt: "Bedroom Walkthrough" },
+      { src: "/photos/entrance-room.jpg", alt: "Entrance Reveal" },
+      { src: "/photos/backyard.jpg", alt: "Outdoor Transition" },
+      { src: "/photos/front-exterior.jpg", alt: "Exterior Opening" },
+    ],
+    stats: [
+      { highlight: "403%", text: "more inquiries for listings with video", source: "Domain.com.au" },
+      { highlight: "60%", text: "higher engagement than photo-only listings", source: "NAR" },
+      { highlight: "85%", text: "of buyers want video content", source: "NAR 2025" },
+      { highlight: "72%", text: "higher social shares with video", source: "NAR Technology Survey" },
+    ],
+  },
+  drone: {
+    icon: Plane,
+    title: "Drone / Aerial",
+    tagline: "See the Bigger Picture",
+    description:
+      "Breathtaking aerial photography and videography that showcases properties, neighborhoods, and landscapes from stunning perspectives. FAA Part 107 certified for safe, legal flights.",
+    heroImage: "/photos/drone-aerial.jpg",
+    heroStat: { value: "68%", label: "Faster Sales with Drone", source: "MLS / Inman" },
+    features: [
+      "High-resolution aerial photography",
+      "Cinematic aerial video footage",
+      "Neighborhood & surrounding area context",
+      "Property boundary & lot visualization",
+      "Community amenity showcase",
+      "FAA Part 107 certified pilot",
+    ],
+    gallery: [
+      { src: "/photos/drone-aerial.jpg", alt: "Aerial Property View" },
+      { src: "/photos/drone-land.jpg", alt: "Land Survey Aerial" },
+      { src: "/photos/front-exterior.jpg", alt: "Property Overview" },
+      { src: "/photos/backyard.jpg", alt: "Backyard Aerial" },
+      { src: "/photos/backyard-2.jpg", alt: "Outdoor Space" },
+      { src: "/photos/right-side.jpg", alt: "Side View" },
+    ],
+    stats: [
+      { highlight: "68%", text: "faster sales with aerial photography", source: "MLS / Inman" },
+      { highlight: "10%", text: "price increase with aerial images", source: "PhotoUp" },
+      { highlight: "85%", text: "of buyers expect aerial visuals", source: "NAR 2025" },
+      { highlight: "52%", text: "of REALTORS now use drone photography", source: "NAR Technology Survey" },
+    ],
+  },
+  "virtual-tours": {
+    icon: Box,
+    title: "3D Virtual Tours",
+    tagline: "Walk Through From Anywhere",
+    description:
+      "Interactive 3D experiences that let buyers explore every room of a property from the comfort of their couch. Available 24/7 — no appointment needed, no scheduling hassles.",
+    heroImage: "/photos/living-kitchen.jpg",
+    heroStat: { value: "31%", label: "Faster Sales with Virtual Tours", source: "Matterport" },
+    features: [
+      "Immersive 3D walkthrough experience",
+      "Interactive floor plans",
+      "Measurement tools for buyers",
+      "Dollhouse & floor plan views",
+      "Embeddable on MLS & websites",
+      "Shareable links for remote buyers",
+    ],
+    gallery: [
+      { src: "/photos/living-room.jpg", alt: "Living Room 3D View" },
+      { src: "/photos/kitchen.jpg", alt: "Kitchen 3D Scan" },
+      { src: "/photos/bedroom.jpg", alt: "Bedroom Tour" },
+      { src: "/photos/master-bath.jpg", alt: "Bathroom Scan" },
+      { src: "/photos/entrance-room.jpg", alt: "Entryway" },
+      { src: "/photos/kitchen-living.jpg", alt: "Open Floor Plan" },
+    ],
+    stats: [
+      { highlight: "31%", text: "faster sales with virtual tours", source: "Matterport" },
+      { highlight: "63%", text: "of buyers consider virtual tours important", source: "NAR" },
+      { highlight: "24/7", text: "availability — open house anytime", source: "" },
+      { highlight: "95%", text: "of buyers more likely to call with a 3D tour", source: "Matterport" },
+    ],
+  },
+} as const;
+
+export type ServiceSlug = keyof typeof servicesData;
