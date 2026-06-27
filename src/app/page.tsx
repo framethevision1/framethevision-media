@@ -289,12 +289,9 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link
-              href="/services/photography"
+            <ServicesDropdownButton
               className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-dark transition-colors"
-            >
-              See More of Our Work <ArrowRight className="w-5 h-5" />
-            </Link>
+            />
           </div>
         </div>
       </section>
