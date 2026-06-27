@@ -13,12 +13,13 @@ const services = [
   { name: "3D Virtual Tours", href: "/services/virtual-tours" },
 ];
 
-const navLinks = [
+const navLinks: { name: string; href: string; external?: boolean }[] = [
   { name: "Portfolio", href: "/portfolio" },
   { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
+  { name: "Client Portal", href: "https://listings.framethevision.media/portal", external: true },
 ];
 
 export default function Navbar() {
@@ -82,15 +83,25 @@ export default function Navbar() {
               )}
             </div>
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium hover:text-gold transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium hover:text-gold transition-colors"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium hover:text-gold transition-colors"
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
 
             <a
               href="/book"
@@ -131,16 +142,27 @@ export default function Navbar() {
 
             <div className="border-t border-cream-dark my-3" />
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block px-3 py-2 text-sm hover:text-gold transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block px-3 py-2 text-sm hover:text-gold transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-3 py-2 text-sm hover:text-gold transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
 
             <div className="pt-3">
               <a
