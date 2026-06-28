@@ -35,7 +35,7 @@ const faqs = [
       },
       {
         q: "How are photos delivered?",
-        a: "All photos are delivered via a secure online gallery where you can download high-resolution files. We provide both web-optimized and print-ready versions.",
+        a: "All media is delivered through your personal client portal where you can view, download, and share. Photos come in both MLS-ready and print-ready formats. You also get a branded property website with lead capture, social media banners, a custom flyer, and a QR code — all included at no extra cost.",
       },
       {
         q: "Do you provide both photos and video?",

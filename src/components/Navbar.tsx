@@ -17,6 +17,7 @@ const navLinks: { name: string; href: string; external?: boolean }[] = [
   { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
   { name: "FAQ", href: "/faq" },
+  { name: "Prep Sheet", href: "/prep" },
   { name: "Contact", href: "/contact" },
   { name: "Client Portal", href: "https://listings.framethevision.media/portal", external: true },
 ];

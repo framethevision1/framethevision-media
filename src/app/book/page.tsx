@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 const included = [
   "Professional HDR photography",
-  "FREE Virtual Twilight & Staging included",
+  "FREE Virtual Twilight & Staging",
   "Your own Property Website",
   "Ready-to-post Social Media Banners",
-  "Custom-designed Marketing Flyer",
-  "Branded QR Code for your listing",
+  "Custom Marketing Flyer & QR Code",
   "Fast 24-48 hour turnaround",
-  "Full media access for 1 year in your personal portal",
+  "1 year media access in your portal",
+  "MLS-ready photo formats",
 ];
 
 export default function BookPage() {
