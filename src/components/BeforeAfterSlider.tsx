@@ -37,18 +37,17 @@ export default function BeforeAfterSlider({
       onMouseDown={(e) => handleMove(e.clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
     >
-      {/* After (twilight - full background) */}
+      {/* After (full background) */}
       <div className="absolute inset-0">
         <Image
           src={afterSrc}
           alt={afterLabel}
           fill
-          className="object-cover brightness-50 saturate-150 hue-rotate-15"
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/60 via-orange-900/20 to-indigo-900/40" />
       </div>
 
-      {/* Before (daytime - clipped) */}
+      {/* Before (clipped) */}
       <div
         className="absolute inset-0"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}

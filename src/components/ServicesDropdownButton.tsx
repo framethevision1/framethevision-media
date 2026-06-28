@@ -8,7 +8,7 @@ const services = [
   { name: "Photography", href: "/services/photography" },
   { name: "Video Tours & Branding", href: "/services/video" },
   { name: "Land Photo & Video", href: "/services/drone" },
-  { name: "A La Carte (Add-Ons)", href: "/pricing#add-ons" },
+  { name: "A La Carte (Add-Ons)", href: "/addons" },
 ];
 
 export default function ServicesDropdownButton({ className }: { className?: string }) {

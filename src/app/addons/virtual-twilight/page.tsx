@@ -108,27 +108,24 @@ export default function VirtualTwilightPage() {
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             <BeforeAfterSlider
-              beforeSrc="/photos/front-exterior.jpg"
-              afterSrc="/photos/front-exterior.jpg"
+              beforeSrc="/photos/twilight-before.jpg"
+              afterSrc="/photos/twilight-after.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />
             <BeforeAfterSlider
-              beforeSrc="/photos/backyard.jpg"
-              afterSrc="/photos/backyard.jpg"
+              beforeSrc="/photos/twilight-before.jpg"
+              afterSrc="/photos/twilight-after.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />
             <BeforeAfterSlider
-              beforeSrc="/photos/right-side.jpg"
-              afterSrc="/photos/right-side.jpg"
+              beforeSrc="/photos/twilight-before.jpg"
+              afterSrc="/photos/twilight-after.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />
           </div>
-          <p className="mt-6 text-center text-sm text-gray-body">
-            * Actual results will vary. Professional virtual twilight editing produces more realistic, refined results than this preview.
-          </p>
         </div>
       </section>
 

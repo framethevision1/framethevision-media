@@ -7,6 +7,7 @@ import {
   Box,
   ArrowRight,
   Star,
+  Sparkles,
   TrendingUp,
   Eye,
   Clock,
@@ -14,6 +15,7 @@ import {
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesDropdownButton from "@/components/ServicesDropdownButton";
+import CardSlideshow from "@/components/CardSlideshow";
 
 const services = [
   {
@@ -22,7 +24,7 @@ const services = [
     description:
       "Stunning HDR photography that captures every detail. Interior, exterior, twilight, and lifestyle shots that make listings shine.",
     href: "/services/photography",
-    image: "/photos/kitchen.jpg",
+    images: ["/photos/kitchen.jpg", "/photos/living-room.jpg", "/photos/bedroom.jpg", "/photos/front-exterior.jpg"],
   },
   {
     icon: Video,
@@ -30,7 +32,7 @@ const services = [
     description:
       "MLS walkthroughs, agent-branded videos, and key delivery content that make you and your listings unforgettable.",
     href: "/services/video",
-    image: "/photos/kitchen-living.jpg",
+    images: ["/photos/kitchen-living.jpg", "/photos/entrance-room.jpg", "/photos/living-room-2.jpg", "/photos/backyard.jpg"],
   },
   {
     icon: Plane,
@@ -38,7 +40,15 @@ const services = [
     description:
       "Aerial photography, cinematic flyover video, traced property lines, and labeled roads that give buyers confidence to pull the trigger.",
     href: "/services/drone",
-    image: "/photos/drone-smoke-tree-1.jpg",
+    images: ["/photos/drone-smoke-tree-1.jpg", "/photos/drone-phelan-1.jpg", "/photos/drone-smoke-tree-2.jpg", "/photos/drone-phelan-2.jpg"],
+  },
+  {
+    icon: Sparkles,
+    title: "A La Carte (Add-Ons)",
+    description:
+      "Virtual twilight, virtual staging, 2D floor plans, and 3D virtual tours. Enhance any shoot with extras that make listings unforgettable.",
+    href: "/addons",
+    images: ["/photos/twilight-after.jpg", "/photos/twilight-before.jpg", "/photos/bedroom.jpg", "/photos/front-exterior.jpg"],
   },
 ];
 
@@ -173,12 +183,7 @@ export default function Home() {
                 href={service.href}
                 className="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <CardSlideshow images={service.images} interval={3000} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="w-10 h-10 rounded-lg bg-gold/20 backdrop-blur-sm flex items-center justify-center mb-3">
