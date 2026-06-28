@@ -166,7 +166,7 @@ export default function PricingPage() {
       </section>
 
       {/* Add-Ons + Video Side by Side */}
-      <section className="relative py-24 overflow-hidden">
+      <section id="add-ons" className="relative py-24 overflow-hidden scroll-mt-20">
         <Image
           src="/photos/living-room.jpg"
           alt=""

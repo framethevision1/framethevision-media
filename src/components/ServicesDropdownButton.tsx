@@ -6,9 +6,9 @@ import { ChevronDown } from "lucide-react";
 
 const services = [
   { name: "Photography", href: "/services/photography" },
-  { name: "Video", href: "/services/video" },
-  { name: "Drone / Aerial", href: "/services/drone" },
-  { name: "3D Virtual Tours", href: "/services/virtual-tours" },
+  { name: "Video Tours & Branding", href: "/services/video" },
+  { name: "Land Photo & Video", href: "/services/drone" },
+  { name: "A La Carte (Add-Ons)", href: "/pricing#add-ons" },
 ];
 
 export default function ServicesDropdownButton({ className }: { className?: string }) {

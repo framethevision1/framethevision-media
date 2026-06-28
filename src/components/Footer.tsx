@@ -4,9 +4,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const serviceLinks = [
   { name: "Photography", href: "/services/photography" },
-  { name: "Video", href: "/services/video" },
-  { name: "Drone / Aerial", href: "/services/drone" },
-  { name: "3D Virtual Tours", href: "/services/virtual-tours" },
+  { name: "Video Tours & Branding", href: "/services/video" },
+  { name: "Land Photo & Video", href: "/services/drone" },
 ];
 
 const companyLinks = [

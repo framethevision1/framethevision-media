@@ -26,27 +26,19 @@ const services = [
   },
   {
     icon: Video,
-    title: "Video Walkthroughs",
+    title: "Video Tours & Branding",
     description:
-      "Cinematic property tours that tell a story. Professionally edited videos with music that engage buyers from the first frame.",
+      "MLS walkthroughs, agent-branded videos, and key delivery content that make you and your listings unforgettable.",
     href: "/services/video",
     image: "/photos/kitchen-living.jpg",
   },
   {
     icon: Plane,
-    title: "Drone / Aerial",
+    title: "Land Photo & Video",
     description:
-      "Breathtaking aerial perspectives that showcase properties, neighborhoods, and surrounding landscapes from above.",
+      "Aerial photography, cinematic flyover video, traced property lines, and labeled roads that give buyers confidence to pull the trigger.",
     href: "/services/drone",
-    image: "/photos/drone-aerial.jpg",
-  },
-  {
-    icon: Box,
-    title: "3D Virtual Tours",
-    description:
-      "Interactive 3D experiences that let buyers walk through properties from anywhere. Available 24/7, no appointment needed.",
-    href: "/services/virtual-tours",
-    image: "/photos/living-room.jpg",
+    image: "/photos/drone-smoke-tree-1.jpg",
   },
 ];
 

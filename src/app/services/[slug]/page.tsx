@@ -35,9 +35,21 @@ export default async function ServicePage({
 
   return (
     <>
-      {/* Hero with Slideshow */}
+      {/* Hero */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <HeroSlideshow images={service.gallery.slice(0, 6)} interval={5000} />
+        {"heroVideo" in service && service.heroVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={service.heroVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <HeroSlideshow images={service.gallery.slice(0, 6)} interval={5000} />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-16 md:pb-24">
           <div className="max-w-3xl">
