@@ -115,7 +115,7 @@ export default function PricingPage() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-gold mb-8 text-center">
             Every Shoot Includes
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
               "Professional HDR photography",
               "FREE Virtual Twilight & Staging",
