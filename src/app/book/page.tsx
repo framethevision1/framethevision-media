@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 const included = [
   "Professional HDR photography",
   "FREE Virtual Twilight & Staging",
-  "Your own Property Website",
+  "Property Website with Lead Capture",
   "Ready-to-post Social Media Banners",
   "Custom Marketing Flyer & QR Code",
+  "Direct MLS uploading",
+  "Listing analytics & weekly stats",
   "Fast 24-48 hour turnaround",
   "1 year media access in your portal",
   "MLS-ready photo formats",
