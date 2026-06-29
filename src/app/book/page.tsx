@@ -67,7 +67,7 @@ export default function BookPage() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gold mb-6 text-center">
               Every Shoot Includes
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {included.map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-gold flex-shrink-0" />
