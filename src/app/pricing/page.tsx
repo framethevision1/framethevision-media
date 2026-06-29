@@ -109,6 +109,34 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Every Shoot Includes */}
+      <section className="py-16 bg-cream border-b border-cream-dark">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-gold mb-8 text-center">
+            Every Shoot Includes
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              "Professional HDR photography",
+              "FREE Virtual Twilight & Staging",
+              "Property Website with Lead Capture",
+              "Ready-to-post Social Media Banners",
+              "Custom Marketing Flyer & QR Code",
+              "Direct MLS uploading",
+              "Listing analytics & weekly stats",
+              "Fast 24-48 hour turnaround",
+              "1 year media access in your portal",
+              "MLS-ready photo formats",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-gold flex-shrink-0" />
+                <span className="text-sm text-brown">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Packages */}
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
