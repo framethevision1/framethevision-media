@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Boxes, Sparkles, type LucideIcon } from "lucide-react";
+
+const ICONS: Record<string, LucideIcon> = { sun: Sun, moon: Moon, boxes: Boxes, sparkles: Sparkles };
 
 interface BeforeAfterSliderProps {
   beforeSrc: string;
   afterSrc: string;
   beforeLabel?: string;
   afterLabel?: string;
+  beforeIcon?: string;
+  afterIcon?: string;
 }
 
 export default function BeforeAfterSlider({
@@ -16,7 +20,11 @@ export default function BeforeAfterSlider({
   afterSrc,
   beforeLabel = "Before",
   afterLabel = "After",
+  beforeIcon = "sun",
+  afterIcon = "moon",
 }: BeforeAfterSliderProps) {
+  const BeforeIcon = ICONS[beforeIcon] ?? Sun;
+  const AfterIcon = ICONS[afterIcon] ?? Moon;
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -80,13 +88,13 @@ export default function BeforeAfterSlider({
       {/* Labels */}
       <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm z-10">
         <div className="flex items-center gap-1.5">
-          <Sun className="w-3.5 h-3.5 text-yellow-500" />
+          <BeforeIcon className="w-3.5 h-3.5 text-yellow-500" />
           <span className="text-xs font-semibold text-brown">{beforeLabel}</span>
         </div>
       </div>
       <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-gold/90 backdrop-blur-sm z-10">
         <div className="flex items-center gap-1.5">
-          <Moon className="w-3.5 h-3.5 text-white" />
+          <AfterIcon className="w-3.5 h-3.5 text-white" />
           <span className="text-xs font-semibold text-white">{afterLabel}</span>
         </div>
       </div>

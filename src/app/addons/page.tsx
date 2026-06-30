@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Moon, Sofa, Map, Box } from "lucide-react";
+import { ArrowRight, Moon, Sofa, Eraser, Map, Box } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "A La Carte Add-Ons | Frame The Vision",
   description:
-    "Enhance any photo shoot with virtual twilight, virtual staging, 2D floor plans, and 3D virtual tours. Serving Victorville, CA and the High Desert.",
+    "Enhance any photo shoot with virtual twilight, virtual staging, de-clutter, 2D floor plans, and 3D virtual tours. Serving Victorville, CA and the High Desert.",
 };
 
 export default function AddOnsPage() {
@@ -125,6 +125,53 @@ export default function AddOnsPage() {
                 </a>
                 <Link
                   href="/addons/virtual-staging"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
+                >
+                  See Examples
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* De-Clutter */}
+      <section className="py-12 bg-cream">
+        <div className="mx-auto px-8 sm:px-12 lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <BeforeAfterSlider
+                beforeSrc="/photos/declutter-before.jpg"
+                afterSrc="/photos/declutter-after.jpg"
+                beforeLabel="Cluttered"
+                afterLabel="De-Cluttered"
+                beforeIcon="boxes"
+                afterIcon="sparkles"
+              />
+            </div>
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
+                  <Eraser className="w-6 h-6 text-gold" />
+                </div>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-brown">
+                De-Clutter
+              </h2>
+              <p className="mt-6 text-gray-body leading-relaxed text-lg">
+                Digitally remove clutter, boxes, and personal items so rooms look
+                clean, spacious, and move-in ready — no heavy lifting required.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
+                >
+                  View Pricing & Book
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <Link
+                  href="/addons/de-clutter"
                   className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
                 >
                   See Examples

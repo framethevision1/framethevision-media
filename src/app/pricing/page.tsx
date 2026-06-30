@@ -67,6 +67,7 @@ const packages = [
 const addOns = [
   { name: "Virtual Twilight", price: 15, href: "/addons/virtual-twilight" },
   { name: "Virtual Staging", price: 30, href: "/addons/virtual-staging" },
+  { name: "De-Clutter", price: 25, href: "/addons/de-clutter" },
   { name: "2D Floor Plan", price: 75 },
   { name: "3D Virtual Tour", price: 125, note: "SAVE $40 — Only $85 when added to any package!" },
 ];
