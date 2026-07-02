@@ -14,7 +14,7 @@ const packages = [
   {
     name: "Basic",
     price: 225,
-    description: "Professional photos for standard listings.",
+    description: "Stop the scroll before they even walk through the door. Stunning HDR photos that make buyers fall in love at first click.",
     icon: Camera,
     features: [
       "Standard photos",
@@ -25,7 +25,7 @@ const packages = [
   {
     name: "Pro",
     price: 275,
-    description: "Photos plus aerial drone for maximum curb appeal.",
+    description: "Ground-level perfection meets aerial drama. The combo that gets listings noticed, toured, and sold — faster than anything else on the market.",
     icon: Plane,
     features: [
       "Standard photos",
@@ -37,7 +37,7 @@ const packages = [
   {
     name: "Premium",
     price: 350,
-    description: "The ultimate all-in-one package — everything you need to dominate the market.",
+    description: "The full arsenal. Photos, drone, floor plan, 3D tour — when you need to crush the competition and leave absolutely nothing on the table.",
     icon: ImageIcon,
     features: [
       "Standard photos",
@@ -52,7 +52,7 @@ const packages = [
   {
     name: "Land",
     price: 150,
-    description: "Specialized for vacant land and lot listings.",
+    description: "Make raw land impossible to ignore. Traced boundaries, labeled features, and drone views that turn empty acres into someone's dream opportunity.",
     icon: Map,
     features: [
       "10–15 photos",
