@@ -27,7 +27,7 @@ const values = [
     icon: Clock,
     title: "Speed",
     description:
-      "24-48 hour turnaround on photos, fast delivery on video and 3D tours. Your listings hit the market on time.",
+      "Next business day delivery on photos, fast delivery on video and 3D tours. Your listings hit the market on time.",
   },
 ];
 

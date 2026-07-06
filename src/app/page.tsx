@@ -11,6 +11,15 @@ import {
   TrendingUp,
   Eye,
   Clock,
+  Zap,
+  BadgeCheck,
+  ShieldCheck,
+  CalendarCheck,
+  Rocket,
+  Aperture,
+  UserCheck,
+  RefreshCw,
+  Award,
 } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
@@ -100,6 +109,76 @@ const testimonials = [
     quote:
       "Professional, punctual, and the quality is outstanding. Frame The Vision is my go-to for every listing now.",
     rating: 5,
+  },
+];
+
+const whyChooseUs = [
+  {
+    icon: Clock,
+    title: "Next Business Day",
+    description: "Edited, MLS-ready media in your inbox the very next business day.",
+  },
+  {
+    icon: Zap,
+    title: "Book in Minutes",
+    description: "Simple online booking — lock in your date in under a minute.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "MLS-Ready Files",
+    description: "Web-optimized and print-ready. Just upload and go live.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Satisfaction Guaranteed",
+    description: "We're not finished until you love every single shot.",
+  },
+];
+
+const howItWorks = [
+  {
+    step: "01",
+    icon: CalendarCheck,
+    title: "Book in 60 Seconds",
+    description:
+      "Pick your package and date online — no phone tag, no back-and-forth. You're locked in instantly.",
+  },
+  {
+    step: "02",
+    icon: Camera,
+    title: "We Capture It All",
+    description:
+      "We arrive on time and shoot every angle — interiors, exteriors, drone, and more, all in one visit.",
+  },
+  {
+    step: "03",
+    icon: Rocket,
+    title: "Delivered Next Day",
+    description:
+      "Your edited, MLS-ready media lands in your inbox the next business day. List it and sell it.",
+  },
+];
+
+const qualityPoints = [
+  {
+    icon: Aperture,
+    title: "Pro HDR Editing",
+    description: "Every photo hand-edited for perfect color, light, and clarity.",
+  },
+  {
+    icon: UserCheck,
+    title: "One Trusted Local Pro",
+    description: "You work directly with Armando — never a rotating cast of strangers.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Free Reshoots",
+    description: "If something isn't right, we come back and fix it — no charge.",
+  },
+  {
+    icon: Award,
+    title: "Consistent Every Time",
+    description: "The same premium standard on every listing, guaranteed.",
   },
 ];
 
@@ -205,6 +284,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Agents Choose Us */}
+      <section className="bg-brown py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
+              The Frame The Vision Difference
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Why Agents Choose Us
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {whyChooseUs.map((item) => (
+              <div key={item.title} className="text-center">
+                <div className="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-7 h-7 text-gold" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm text-gray-300 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Professional Media */}
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -243,6 +349,90 @@ export default function Home() {
               compared to those who don&apos;t.
             </p>
             <p className="mt-1 text-xs text-gray-body">Source: NAR</p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="relative py-24 overflow-hidden">
+        <Image
+          src="/photos/living-room-2.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
+              Simple &amp; Fast
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              How It Works
+            </h2>
+            <p className="mt-4 max-w-2xl text-gray-300 text-lg leading-relaxed mx-auto">
+              From booking to delivery in three effortless steps — so you spend
+              less time coordinating and more time closing.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {howItWorks.map((item) => (
+              <div
+                key={item.step}
+                className="relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8"
+              >
+                <span className="absolute -top-6 right-6 text-6xl font-bold text-gold/20">
+                  {item.step}
+                </span>
+                <div className="w-14 h-14 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
+                  <item.icon className="w-7 h-7 text-gold" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-gray-300 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <a
+              href="/book"
+              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
+            >
+              Book in 60 Seconds
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Quality Guarantee */}
+      <section className="py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            tag="Our Guarantee"
+            title="Quality You Can Count On"
+            description="Every listing gets the same obsessive attention to detail. Here's how we make sure your media is flawless, every single time."
+          />
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {qualityPoints.map((point) => (
+              <div
+                key={point.title}
+                className="rounded-2xl border border-cream-dark p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-5">
+                  <point.icon className="w-7 h-7 text-gold" />
+                </div>
+                <h3 className="text-lg font-semibold text-brown">
+                  {point.title}
+                </h3>
+                <p className="mt-3 text-sm text-gray-body leading-relaxed">
+                  {point.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

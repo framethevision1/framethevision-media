@@ -125,7 +125,7 @@ export default function PricingPage() {
               "Custom Marketing Flyer & QR Code",
               "Direct MLS uploading",
               "Listing analytics & weekly stats",
-              "Fast 24-48 hour turnaround",
+              "Next business day delivery",
               "1 year media access in your portal",
               "MLS-ready photo formats",
             ].map((item) => (

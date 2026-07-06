@@ -16,7 +16,7 @@ const benefits = [
   "Glowing interior lights that make homes feel inviting",
   "Landscape & exterior lighting added digitally",
   "No scheduling around sunset — shoot anytime",
-  "Delivered within 24-48 hours",
+  "Delivered the next business day",
   "1 FREE with every shoot — $15 per additional image",
 ];
 
@@ -43,7 +43,7 @@ const whyTwilight = [
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Get your virtual twilight images back within 24-48 hours along with the rest of your photos. No extra appointments, no extra hassle.",
+      "Get your virtual twilight images back the next business day along with the rest of your photos. No extra appointments, no extra hassle.",
   },
 ];
 

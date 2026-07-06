@@ -16,7 +16,7 @@ const benefits = [
   "Multiple design styles available (modern, farmhouse, luxury, etc.)",
   "Helps buyers visualize empty or outdated spaces",
   "Fraction of the cost of physical staging",
-  "Delivered within 24-48 hours",
+  "Delivered the next business day",
   "1 FREE with every shoot — $30 per additional room",
 ];
 
@@ -41,9 +41,9 @@ const whyStaging = [
   },
   {
     icon: Clock,
-    title: "Ready in 24-48 Hours",
+    title: "Ready the Next Business Day",
     description:
-      "No waiting for furniture deliveries or coordinating with stagers. Send us the empty room photo and we'll have it staged within 48 hours.",
+      "No waiting for furniture deliveries or coordinating with stagers. Send us the empty room photo and we'll have it staged by the next business day.",
   },
 ];
 

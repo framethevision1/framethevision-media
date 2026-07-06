@@ -14,7 +14,7 @@ export const servicesData = {
       "Wide-angle lens coverage of every room",
       "Professional editing & color correction",
       "High-resolution files for print & digital",
-      "24-48 hour turnaround",
+      "Next business day delivery",
     ],
     gallery: [
       { src: "/photos/living-room.jpg", alt: "Living Room" },

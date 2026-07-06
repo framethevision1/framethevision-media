@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, X, Send, ArrowLeft } from "lucide-react";
 import Image from "next/image";
+
+const GREETING =
+  "Hey there! 👋 I'm here to help answer any questions about Frame The Vision. What would you like to know?";
 
 interface QA {
   question: string;
@@ -17,7 +20,7 @@ const topics: { label: string; questions: QA[] }[] = [
       {
         question: "What are your photography packages?",
         answer:
-          "We offer 4 packages:\n\n• Basic — $225 (interior & exterior photos)\n• Pro — $275 (photos + drone aerials)\n• Premium — $350 (photos + drone + 2D floor plan)\n• Land — $150 (10-15 photos with property lines)\n\nAll packages include professional editing and 24-48 hour turnaround.",
+          "We offer 4 packages:\n\n• Basic — $225 (interior & exterior photos)\n• Pro — $275 (photos + drone aerials)\n• Premium — $350 (photos + drone + 2D floor plan)\n• Land — $150 (10-15 photos with property lines)\n\nAll packages include professional editing and next business day delivery.",
       },
       {
         question: "What add-ons do you offer?",
@@ -62,7 +65,7 @@ const topics: { label: string; questions: QA[] }[] = [
       {
         question: "What is your turnaround time?",
         answer:
-          "Photos are delivered within 24-48 hours. Video walkthroughs take 3-5 business days. 3D virtual tours are ready within 24-48 hours. Rush delivery is available.",
+          "Photos are delivered the next business day. Video walkthroughs take 3-5 business days. 3D virtual tours are ready the next business day. Rush delivery is available.",
       },
       {
         question: "How are photos delivered?",
@@ -103,14 +106,23 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
 
   function startChat() {
-    setMessages([
-      {
-        role: "bot",
-        text: "Hey there! 👋 I'm here to help answer any questions about Frame The Vision. What would you like to know?",
-      },
-    ]);
+    setMessages([{ role: "bot", text: GREETING }]);
     setView("topics");
   }
+
+  // Auto-open once per session so new visitors get greeted right away,
+  // without re-popping on every page navigation or after they close it.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (sessionStorage.getItem("ftv_chat_greeted")) return;
+    const timer = setTimeout(() => {
+      setMessages([{ role: "bot", text: GREETING }]);
+      setView("topics");
+      setOpen(true);
+      sessionStorage.setItem("ftv_chat_greeted", "1");
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleOpen() {
     if (!open) {

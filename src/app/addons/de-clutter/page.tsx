@@ -16,7 +16,7 @@ const benefits = [
   "Rooms look clean, open, and move-in ready",
   "Keeps the home's real walls, floors, and finishes",
   "Perfect for occupied or messy vacant listings",
-  "Delivered within 24-48 hours",
+  "Delivered the next business day",
   "Just $25 per photo",
 ];
 
@@ -43,7 +43,7 @@ const whyDeclutter = [
     icon: Clock,
     title: "Fast Turnaround",
     description:
-      "Get your de-cluttered images back within 24-48 hours, right alongside the rest of your photos.",
+      "Get your de-cluttered images back the next business day, right alongside the rest of your photos.",
   },
 ];
 

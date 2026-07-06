@@ -31,7 +31,7 @@ const faqs = [
     questions: [
       {
         q: "What is your turnaround time?",
-        a: "Photos are delivered within 24-48 hours. Video walkthroughs typically take 3-5 business days. 3D virtual tours are usually ready within 24-48 hours. Rush delivery is available.",
+        a: "Photos are delivered the next business day. Video walkthroughs typically take 3-5 business days. 3D virtual tours are usually ready the next business day. Rush delivery is available.",
       },
       {
         q: "How are photos delivered?",
