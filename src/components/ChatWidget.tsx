@@ -90,7 +90,7 @@ const topics: { label: string; questions: QA[] }[] = [
       {
         question: "Do you travel outside the High Desert?",
         answer:
-          "Yes! We can accommodate shoots outside our core area for an additional travel fee. Contact us for a custom quote.",
+          "Yes! We serve all of the High Desert. For locations farther out, a small travel fee applies — we'll confirm it when you book.",
       },
     ],
   },

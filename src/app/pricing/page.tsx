@@ -104,8 +104,9 @@ export default function PricingPage() {
             surprises — just professional media that sells homes faster.
           </p>
           <p className="mt-3 text-sm text-gray-300">
-            All pricing is based on a radius of 30 miles from 92395.
-            Properties outside this area may incur a travel fee.
+            Pricing is based on a 30-mile radius from 92395. A small travel fee
+            applies for locations farther out — we&apos;ll confirm it when you
+            book.
           </p>
         </div>
       </section>

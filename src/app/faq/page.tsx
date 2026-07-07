@@ -22,7 +22,7 @@ const faqs = [
       },
       {
         q: "Do you travel outside the High Desert area?",
-        a: "Yes! We primarily serve Victorville, Hesperia, Apple Valley, and the surrounding High Desert, but we can accommodate shoots outside our core area for an additional travel fee.",
+        a: "Yes! We serve Victorville, Hesperia, Apple Valley, and the surrounding High Desert. For locations farther out, a small travel fee applies — we'll confirm the amount when you book.",
       },
     ],
   },
