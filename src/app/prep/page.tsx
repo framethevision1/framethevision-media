@@ -18,6 +18,10 @@ const interior = [
   "Closet and cabinet doors shut — we don't need to see what's inside.",
   "Mirrors and glass spotless — smudges show up in HDR photography.",
   "Bathrooms show-ready — lids down, fresh towels, products hidden.",
+  "Shower and tub cleared — shampoo, conditioner, and loose bottles out of sight.",
+  "Bathrobes and everyday towels removed — leave only decorative or luxury towels on the rack.",
+  "Pet gear tucked away — food and water bowls, toys, and crates.",
+  "Trash cans out of frame — indoors too, not just the curbside bins.",
   "Burnt-out bulbs replaced — dark spots draw the eye for the wrong reasons.",
   "Ceiling fans and TVs off — motion and screen glare ruin photos.",
 ];
@@ -29,6 +33,7 @@ const exterior = [
   "Lawn mowed and hedges trimmed if time allows.",
   "Patio furniture arranged neatly — or removed if it looks worn.",
   "Kids' toys, pet items, and yard clutter picked up.",
+  "BBQ and grill covers off — a clean grill looks better than a shapeless cover.",
 ];
 
 const drone = [
