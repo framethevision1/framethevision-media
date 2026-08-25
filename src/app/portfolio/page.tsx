@@ -13,6 +13,8 @@ const filters = [
 ];
 
 const portfolioItems = [
+  { id: 19, category: "photo", title: "Front Exterior", location: "Barstow, CA", image: "/photos/barstow-exterior.jpg" },
+  { id: 20, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
   { id: 1, category: "photo", title: "Living Room", location: "Victorville, CA", image: "/photos/living-room.jpg" },
   { id: 2, category: "photo", title: "Kitchen", location: "Victorville, CA", image: "/photos/kitchen.jpg" },
   { id: 3, category: "drone", title: "Aerial Property View", location: "Victorville, CA", image: "/photos/drone-aerial.jpg" },
