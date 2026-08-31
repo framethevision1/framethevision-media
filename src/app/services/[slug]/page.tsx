@@ -90,6 +90,26 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            tag="Gallery"
+            title="See Our Work"
+            description="Real results from real shoots across the High Desert."
+          />
+          <div className="mt-16">
+            <GalleryLightbox
+              items={galleryItems.map((i) => ({
+                src: i.image,
+                title: i.title,
+                subtitle: i.location,
+              }))}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Key Stat */}
       <section className="py-12 bg-gold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -126,26 +146,6 @@ export default async function ServicePage({
               Book Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            tag="Gallery"
-            title="See Our Work"
-            description="Real results from real shoots across the High Desert."
-          />
-          <div className="mt-16">
-            <GalleryLightbox
-              items={galleryItems.map((i) => ({
-                src: i.image,
-                title: i.title,
-                subtitle: i.location,
-              }))}
-            />
           </div>
         </div>
       </section>
