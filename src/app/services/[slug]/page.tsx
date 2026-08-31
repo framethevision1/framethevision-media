@@ -110,19 +110,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Key Stat */}
-      <section className="py-12 bg-gold">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-4xl md:text-5xl font-bold text-white">
-            {service.heroStat.value}
-          </p>
-          <p className="mt-2 text-white/80">{service.heroStat.label}</p>
-          {service.heroStat.source && (
-            <p className="mt-1 text-xs text-white/50">Source: {service.heroStat.source}</p>
-          )}
-        </div>
-      </section>
-
       {/* What's Included */}
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
