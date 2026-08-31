@@ -102,31 +102,29 @@ export default function VirtualStagingPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             tag="The Transformation"
-            title="Empty to Stunning in 48 Hours"
+            title="Empty to Stunning"
             description="See how virtual staging transforms vacant rooms into spaces buyers can picture themselves living in."
           />
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <BeforeAfterSlider
-              beforeSrc="/photos/living-room-2.jpg"
-              afterSrc="/photos/living-room.jpg"
+              beforeSrc="/photos/staging-before.jpg"
+              afterSrc="/photos/staging-after.jpg"
               beforeLabel="Empty"
               afterLabel="Staged"
+              beforeIcon="boxes"
+              afterIcon="sparkles"
             />
             <BeforeAfterSlider
-              beforeSrc="/photos/bedroom-2.jpg"
-              afterSrc="/photos/bedroom.jpg"
+              beforeSrc="/photos/staging-before-2.jpg"
+              afterSrc="/photos/staging-after-2.jpg"
               beforeLabel="Empty"
               afterLabel="Staged"
-            />
-            <BeforeAfterSlider
-              beforeSrc="/photos/entrance-room.jpg"
-              afterSrc="/photos/kitchen-living.jpg"
-              beforeLabel="Empty"
-              afterLabel="Staged"
+              beforeIcon="boxes"
+              afterIcon="sparkles"
             />
           </div>
           <p className="mt-6 text-center text-sm text-gray-body">
-            * Photos shown are for demonstration purposes. Your staging will be customized to match the property style.
+            * Real virtual stagings from Helendale &amp; Barstow listings — drag each slider to reveal the transformation.
           </p>
         </div>
       </section>

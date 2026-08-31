@@ -78,6 +78,13 @@ export default function Navbar() {
                       {s.name}
                     </Link>
                   ))}
+                  <div className="my-2 border-t border-cream-dark" />
+                  <Link
+                    href="/portfolio"
+                    className="block px-4 py-2.5 text-sm font-semibold hover:bg-cream-dark hover:text-gold transition-colors"
+                  >
+                    View Full Portfolio
+                  </Link>
                 </div>
                 </div>
               )}
@@ -139,6 +146,13 @@ export default function Navbar() {
                 {s.name}
               </Link>
             ))}
+            <Link
+              href="/portfolio"
+              className="block px-3 py-2 text-sm font-semibold hover:text-gold transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              View Full Portfolio
+            </Link>
 
             <div className="border-t border-cream-dark my-3" />
 

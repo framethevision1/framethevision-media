@@ -92,10 +92,12 @@ export default function AddOnsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="lg:order-2">
               <BeforeAfterSlider
-                beforeSrc="/photos/bedroom-2.jpg"
-                afterSrc="/photos/bedroom.jpg"
+                beforeSrc="/photos/staging-before.jpg"
+                afterSrc="/photos/staging-after.jpg"
                 beforeLabel="Empty"
                 afterLabel="Staged"
+                beforeIcon="boxes"
+                afterIcon="sparkles"
               />
             </div>
             <div className="lg:order-1">

@@ -108,14 +108,14 @@ export default function VirtualTwilightPage() {
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             <BeforeAfterSlider
-              beforeSrc="/photos/twilight-before.jpg"
-              afterSrc="/photos/twilight-after.jpg"
+              beforeSrc="/photos/twilight-before-2.jpg"
+              afterSrc="/photos/twilight-after-2.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />
             <BeforeAfterSlider
-              beforeSrc="/photos/twilight-before.jpg"
-              afterSrc="/photos/twilight-after.jpg"
+              beforeSrc="/photos/twilight-before-3.jpg"
+              afterSrc="/photos/twilight-after-3.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />

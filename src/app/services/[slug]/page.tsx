@@ -3,9 +3,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, Moon, Sofa } from "lucide-react";
 import { servicesData, type ServiceSlug } from "@/lib/services-data";
+import { portfolioByCategory, type PortfolioCategory } from "@/lib/portfolio-data";
 import SectionHeading from "@/components/SectionHeading";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import GalleryLightbox from "@/components/GalleryLightbox";
 
 export function generateStaticParams() {
   return Object.keys(servicesData).map((slug) => ({ slug }));
@@ -32,6 +34,8 @@ export default async function ServicePage({
   if (!service) notFound();
 
   const Icon = service.icon;
+  const galleryItems = portfolioByCategory(service.category as PortfolioCategory);
+  const heroImages = galleryItems.slice(0, 6).map((i) => ({ src: i.image, alt: i.title }));
 
   return (
     <>
@@ -48,7 +52,7 @@ export default async function ServicePage({
             <source src={service.heroVideo} type="video/mp4" />
           </video>
         ) : (
-          <HeroSlideshow images={service.gallery.slice(0, 6)} interval={5000} />
+          <HeroSlideshow images={heroImages} interval={5000} />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-16 md:pb-24">
@@ -134,21 +138,14 @@ export default async function ServicePage({
             title="See Our Work"
             description="Real results from real shoots across the High Desert."
           />
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4">
-            {service.gallery.map((img, i) => (
-              <div
-                key={i}
-                className="aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={600}
-                  height={450}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
+          <div className="mt-16">
+            <GalleryLightbox
+              items={galleryItems.map((i) => ({
+                src: i.image,
+                title: i.title,
+                subtitle: i.location,
+              }))}
+            />
           </div>
         </div>
       </section>
@@ -189,10 +186,12 @@ export default async function ServicePage({
 
               <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
                 <BeforeAfterSlider
-                  beforeSrc="/photos/bedroom-2.jpg"
-                  afterSrc="/photos/bedroom.jpg"
+                  beforeSrc="/photos/staging-before.jpg"
+                  afterSrc="/photos/staging-after.jpg"
                   beforeLabel="Empty"
                   afterLabel="Staged"
+                  beforeIcon="boxes"
+                  afterIcon="sparkles"
                 />
                 <Link href="/addons/virtual-staging" className="block p-6 bg-cream border border-cream-dark border-t-0 rounded-b-2xl group">
                   <div className="flex items-center gap-3 mb-2">
