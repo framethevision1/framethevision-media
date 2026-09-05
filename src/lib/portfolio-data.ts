@@ -18,7 +18,6 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 3, category: "photo", title: "Front Exterior", location: "Oak Hills, CA", image: "/photos/joshua-exterior.jpg" },
   { id: 4, category: "photo", title: "Waterfall Island", location: "Oak Hills, CA", image: "/photos/joshua-island.jpg" },
   { id: 5, category: "photo", title: "Dining Area", location: "Hesperia, CA", image: "/photos/hesperia-dining.jpg" },
-  { id: 6, category: "photo", title: "Great Room", location: "Oak Hills, CA", image: "/photos/joshua-greatroom.jpg" },
   { id: 7, category: "photo", title: "Front Exterior", location: "Barstow, CA", image: "/photos/patricia-exterior.jpg" },
   { id: 8, category: "photo", title: "Primary Bathroom", location: "Oak Hills, CA", image: "/photos/joshua-bath-2.jpg" },
   { id: 9, category: "photo", title: "Kitchen & Fireplace", location: "Oak Hills, CA", image: "/photos/joshua-kitchen-2.jpg" },

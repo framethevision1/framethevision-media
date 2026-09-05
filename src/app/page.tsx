@@ -200,7 +200,7 @@ const heroImages = [
   { src: "/photos/twilight-after-2.jpg", alt: "Twilight exterior in Barstow, CA by Frame The Vision" },
   { src: "/photos/silverlakes-aerial.jpg", alt: "Silver Lakes aerial in Helendale, CA by Frame The Vision" },
   { src: "/photos/twi-wrightwood-after.jpg", alt: "Mountain cabin at twilight in Wrightwood, CA by Frame The Vision" },
-  { src: "/photos/joshua-greatroom.jpg", alt: "Open-concept great room in Oak Hills, CA by Frame The Vision" },
+  { src: "/photos/joshua-family.jpg", alt: "Bright open family room in Oak Hills, CA by Frame The Vision" },
   { src: "/photos/twi-birdie-after.jpg", alt: "Aerial lake twilight in Helendale, CA by Frame The Vision" },
 ];
 
