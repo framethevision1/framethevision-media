@@ -23,6 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 42, category: "photo", title: "Cabin Great Room", location: "Wrightwood, CA", image: "/photos/wrightwood-fireplace.jpg" },
   { id: 43, category: "photo", title: "Mountain Backyard", location: "Wrightwood, CA", image: "/photos/wrightwood-backyard.jpg" },
   { id: 8, category: "photo", title: "Dining Room", location: "Oak Hills, CA", image: "/photos/joshua-dining.jpg" },
+  { id: 44, category: "photo", title: "Breakfast Nook", location: "Oak Hills, CA", image: "/photos/joshua-nook.jpg" },
   { id: 9, category: "photo", title: "Dining Area", location: "Hesperia, CA", image: "/photos/hesperia-dining.jpg" },
   { id: 10, category: "photo", title: "Primary Bedroom", location: "Barstow, CA", image: "/photos/patricia-bedroom.jpg" },
   { id: 11, category: "photo", title: "Primary Bedroom", location: "Hesperia, CA", image: "/photos/hesperia-bedroom.jpg" },
