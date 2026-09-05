@@ -35,6 +35,19 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 17, category: "photo", title: "Front Exterior", location: "Apple Valley, CA", image: "/photos/thunderbird-exterior.jpg" },
   { id: 18, category: "photo", title: "Kitchen", location: "Helendale, CA", image: "/photos/birdie-kitchen.jpg" },
 
+  { id: 45, category: "photo", title: "Formal Living Room", location: "Oak Hills, CA", image: "/photos/joshua-living.jpg" },
+  { id: 46, category: "photo", title: "Great Room", location: "Oak Hills, CA", image: "/photos/joshua-greatroom.jpg" },
+  { id: 47, category: "photo", title: "Kitchen & Fireplace", location: "Oak Hills, CA", image: "/photos/joshua-kitchen-2.jpg" },
+  { id: 48, category: "photo", title: "Waterfall Island", location: "Oak Hills, CA", image: "/photos/joshua-island.jpg" },
+  { id: 49, category: "photo", title: "Primary Bathroom", location: "Oak Hills, CA", image: "/photos/joshua-bath-2.jpg" },
+  { id: 50, category: "photo", title: "Backyard Pool", location: "Oak Hills, CA", image: "/photos/joshua-pool.jpg" },
+  { id: 51, category: "photo", title: "Kitchen", location: "Helendale, CA", image: "/photos/grifton-kitchen.jpg" },
+  { id: 52, category: "photo", title: "Primary Bathroom", location: "Helendale, CA", image: "/photos/grifton-bath.jpg" },
+  { id: 53, category: "photo", title: "Front Exterior", location: "Helendale, CA", image: "/photos/grifton-exterior.jpg" },
+  { id: 54, category: "photo", title: "Front Exterior", location: "Helendale, CA", image: "/photos/birdie-exterior.jpg" },
+  { id: 55, category: "photo", title: "Renovated Bath", location: "Barstow, CA", image: "/photos/patricia-bath-2.jpg" },
+  { id: 56, category: "photo", title: "Kitchen", location: "Barstow, CA", image: "/photos/patricia-kitchen-2.jpg" },
+
   // ---- Land Photo & Video (drone/aerial) ----
   { id: 19, category: "drone", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial.jpg" },
   { id: 20, category: "drone", title: "Aerial Property View", location: "Oak Hills, CA", image: "/photos/joshua-aerial.jpg" },
@@ -46,6 +59,10 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 26, category: "drone", title: "Lake & Mountain View", location: "Helendale, CA", image: "/photos/silverlakes-aerial-2.jpg" },
   { id: 27, category: "drone", title: "Mountain Backdrop Aerial", location: "Apple Valley, CA", image: "/photos/thunderbird-aerial-2.jpg" },
   { id: 28, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
+
+  { id: 57, category: "drone", title: "Aerial — Pool & Drive", location: "Oak Hills, CA", image: "/photos/joshua-aerial-2.jpg" },
+  { id: 58, category: "drone", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial-3.jpg" },
+  { id: 59, category: "drone", title: "Lake & Golf Aerial", location: "Helendale, CA", image: "/photos/birdie-aerial-3.jpg" },
 
   // ---- Video Tours & Branding (representative stills from real shoots) ----
   { id: 29, category: "video", title: "Property Video Tour", location: "Barstow, CA", image: "/photos/patricia-kitchen.jpg" },
