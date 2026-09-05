@@ -114,16 +114,34 @@ export default function VirtualTwilightPage() {
               afterLabel="Virtual Twilight"
             />
             <BeforeAfterSlider
+              beforeSrc="/photos/twi-wrightwood-before.jpg"
+              afterSrc="/photos/twi-wrightwood-after.jpg"
+              beforeLabel="Daytime"
+              afterLabel="Virtual Twilight"
+            />
+            <BeforeAfterSlider
+              beforeSrc="/photos/twi-joshua-before.jpg"
+              afterSrc="/photos/twi-joshua-after.jpg"
+              beforeLabel="Daytime"
+              afterLabel="Virtual Twilight"
+            />
+            <BeforeAfterSlider
               beforeSrc="/photos/twilight-before-3.jpg"
               afterSrc="/photos/twilight-after-3.jpg"
               beforeLabel="Daytime"
               afterLabel="Virtual Twilight"
             />
             <BeforeAfterSlider
-              beforeSrc="/photos/twilight-before.jpg"
-              afterSrc="/photos/twilight-after.jpg"
-              beforeLabel="Daytime"
-              afterLabel="Virtual Twilight"
+              beforeSrc="/photos/twi-thunderbird-before.jpg"
+              afterSrc="/photos/twi-thunderbird-after.jpg"
+              beforeLabel="Aerial Day"
+              afterLabel="Aerial Twilight"
+            />
+            <BeforeAfterSlider
+              beforeSrc="/photos/twi-birdie-before.jpg"
+              afterSrc="/photos/twi-birdie-after.jpg"
+              beforeLabel="Aerial Day"
+              afterLabel="Aerial Twilight"
             />
           </div>
         </div>

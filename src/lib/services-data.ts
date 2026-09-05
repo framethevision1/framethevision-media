@@ -54,7 +54,7 @@ export const servicesData = {
     tagline: "Sell Land That Sells Itself",
     description:
       "Land doesn't sell itself — but the right visuals do. Aerial photography, cinematic flyover video, traced property lines, and labeled access roads that give buyers the confidence to pull the trigger. FAA Part 107 certified.",
-    heroImage: "/photos/drone-smoke-tree-1.jpg",
+    heroImage: "/photos/silverlakes-aerial.jpg",
     heroVideo: "/photos/drone-hero-video.mp4",
     heroStat: { value: "68%", label: "Faster Sales with Drone", source: "MLS / Inman" },
     features: [
