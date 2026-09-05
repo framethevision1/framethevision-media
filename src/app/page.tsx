@@ -196,15 +196,14 @@ export default function Home() {
     <>
       {/* Hero with Video Background */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/photos/hero-video.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/photos/joshua-exterior.jpg"
+          alt="Real estate exterior in Oak Hills, CA by Frame The Vision"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
