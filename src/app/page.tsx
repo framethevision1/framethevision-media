@@ -196,11 +196,11 @@ const portfolioImages = [
 const heroImages = [
   { src: "/photos/joshua-exterior.jpg", alt: "Real estate exterior in Oak Hills, CA by Frame The Vision" },
   { src: "/photos/twi-thunderbird-after.jpg", alt: "Aerial twilight of a High Desert property by Frame The Vision" },
-  { src: "/photos/joshua-pool.jpg", alt: "Backyard pool in Oak Hills, CA by Frame The Vision" },
+  { src: "/photos/patricia-kitchen.jpg", alt: "Renovated marble kitchen in Barstow, CA by Frame The Vision" },
   { src: "/photos/twilight-after-2.jpg", alt: "Twilight exterior in Barstow, CA by Frame The Vision" },
   { src: "/photos/silverlakes-aerial.jpg", alt: "Silver Lakes aerial in Helendale, CA by Frame The Vision" },
   { src: "/photos/twi-wrightwood-after.jpg", alt: "Mountain cabin at twilight in Wrightwood, CA by Frame The Vision" },
-  { src: "/photos/patricia-exterior.jpg", alt: "Renovated home exterior in Barstow, CA by Frame The Vision" },
+  { src: "/photos/joshua-greatroom.jpg", alt: "Open-concept great room in Oak Hills, CA by Frame The Vision" },
   { src: "/photos/twi-birdie-after.jpg", alt: "Aerial lake twilight in Helendale, CA by Frame The Vision" },
 ];
 
