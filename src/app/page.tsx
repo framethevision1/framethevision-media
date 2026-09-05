@@ -25,6 +25,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesDropdownButton from "@/components/ServicesDropdownButton";
 import CardSlideshow from "@/components/CardSlideshow";
+import HeroSlideshow from "@/components/HeroSlideshow";
 
 const services = [
   {
@@ -191,19 +192,24 @@ const portfolioImages = [
   { src: "/photos/backyard.jpg", alt: "Backyard" },
 ];
 
+// Curated best shots for the homepage hero — day and twilight alternating.
+const heroImages = [
+  { src: "/photos/joshua-exterior.jpg", alt: "Real estate exterior in Oak Hills, CA by Frame The Vision" },
+  { src: "/photos/twi-thunderbird-after.jpg", alt: "Aerial twilight of a High Desert property by Frame The Vision" },
+  { src: "/photos/joshua-pool.jpg", alt: "Backyard pool in Oak Hills, CA by Frame The Vision" },
+  { src: "/photos/twilight-after-2.jpg", alt: "Twilight exterior in Barstow, CA by Frame The Vision" },
+  { src: "/photos/silverlakes-aerial.jpg", alt: "Silver Lakes aerial in Helendale, CA by Frame The Vision" },
+  { src: "/photos/twi-wrightwood-after.jpg", alt: "Mountain cabin at twilight in Wrightwood, CA by Frame The Vision" },
+  { src: "/photos/patricia-exterior.jpg", alt: "Renovated home exterior in Barstow, CA by Frame The Vision" },
+  { src: "/photos/twi-birdie-after.jpg", alt: "Aerial lake twilight in Helendale, CA by Frame The Vision" },
+];
+
 export default function Home() {
   return (
     <>
       {/* Hero with Video Background */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <Image
-          src="/photos/joshua-exterior.jpg"
-          alt="Real estate exterior in Oak Hills, CA by Frame The Vision"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <HeroSlideshow images={heroImages} interval={5000} />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
