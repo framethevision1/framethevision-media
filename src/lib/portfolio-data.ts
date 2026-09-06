@@ -1,4 +1,4 @@
-export type PortfolioCategory = "photo" | "video" | "drone" | "3d";
+export type PortfolioCategory = "photo" | "video" | "land" | "aerial" | "3d";
 
 export interface PortfolioItem {
   id: number;
@@ -47,20 +47,30 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 33, category: "photo", title: "Bathroom", location: "Barstow, CA", image: "/photos/patricia-bath.jpg" },
   { id: 34, category: "photo", title: "Mountain Backyard", location: "Wrightwood, CA", image: "/photos/wrightwood-backyard.jpg" },
 
-  // ---- Land Photo & Video (drone/aerial, ranked by appeal) ----
-  { id: 35, category: "drone", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial.jpg" },
-  { id: 36, category: "drone", title: "Mountain-View Aerial", location: "Apple Valley, CA", image: "/photos/thunderbird-aerial.jpg" },
-  { id: 37, category: "drone", title: "Lake & Mountain View", location: "Helendale, CA", image: "/photos/silverlakes-aerial-2.jpg" },
-  { id: 38, category: "drone", title: "Aerial Property View", location: "Oak Hills, CA", image: "/photos/joshua-aerial.jpg" },
-  { id: 39, category: "drone", title: "Lake & Golf Aerial", location: "Helendale, CA", image: "/photos/birdie-aerial-3.jpg" },
-  { id: 40, category: "drone", title: "Aerial — Pool & Drive", location: "Oak Hills, CA", image: "/photos/joshua-aerial-2.jpg" },
-  { id: 41, category: "drone", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial-3.jpg" },
-  { id: 42, category: "drone", title: "Mountain Backdrop Aerial", location: "Apple Valley, CA", image: "/photos/thunderbird-aerial-2.jpg" },
-  { id: 43, category: "drone", title: "Forested-Lot Aerial", location: "Wrightwood, CA", image: "/photos/wrightwood-aerial.jpg" },
-  { id: 44, category: "drone", title: "Lake Community Aerial", location: "Helendale, CA", image: "/photos/birdie-aerial-2.jpg" },
-  { id: 45, category: "drone", title: "Neighborhood Aerial", location: "Hesperia, CA", image: "/photos/hesperia-aerial.jpg" },
-  { id: 46, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/patricia-aerial.jpg" },
-  { id: 47, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
+  // ---- Aerial (property drone shots — shown on the Photography page, not the Land page) ----
+  { id: 35, category: "aerial", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial.jpg" },
+  { id: 36, category: "aerial", title: "Mountain-View Aerial", location: "Apple Valley, CA", image: "/photos/thunderbird-aerial.jpg" },
+  { id: 37, category: "aerial", title: "Lake & Mountain View", location: "Helendale, CA", image: "/photos/silverlakes-aerial-2.jpg" },
+  { id: 38, category: "aerial", title: "Aerial Property View", location: "Oak Hills, CA", image: "/photos/joshua-aerial.jpg" },
+  { id: 39, category: "aerial", title: "Lake & Golf Aerial", location: "Helendale, CA", image: "/photos/birdie-aerial-3.jpg" },
+  { id: 40, category: "aerial", title: "Aerial — Pool & Drive", location: "Oak Hills, CA", image: "/photos/joshua-aerial-2.jpg" },
+  { id: 41, category: "aerial", title: "Silver Lakes Aerial", location: "Helendale, CA", image: "/photos/silverlakes-aerial-3.jpg" },
+  { id: 42, category: "aerial", title: "Mountain Backdrop Aerial", location: "Apple Valley, CA", image: "/photos/thunderbird-aerial-2.jpg" },
+  { id: 43, category: "aerial", title: "Forested-Lot Aerial", location: "Wrightwood, CA", image: "/photos/wrightwood-aerial.jpg" },
+  { id: 44, category: "aerial", title: "Lake Community Aerial", location: "Helendale, CA", image: "/photos/birdie-aerial-2.jpg" },
+  { id: 45, category: "aerial", title: "Neighborhood Aerial", location: "Hesperia, CA", image: "/photos/hesperia-aerial.jpg" },
+  { id: 46, category: "aerial", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/patricia-aerial.jpg" },
+  { id: 47, category: "aerial", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
+
+  // ---- Land Photo & Video (vacant-land parcels — shown on the Land page) ----
+  { id: 48, category: "land", title: "Highway-Frontage Parcel", location: "Pearblossom, CA", image: "/photos/land-pearblossom-1.jpg" },
+  { id: 49, category: "land", title: "Land with Road Access", location: "Apple Valley, CA", image: "/photos/land-applevalley-1.jpg" },
+  { id: 50, category: "land", title: "Traced Parcel Boundary", location: "Pearblossom, CA", image: "/photos/land-pearblossom-2.jpg" },
+  { id: 51, category: "land", title: "Corner-Lot Access", location: "Hinkley, CA", image: "/photos/land-hinkley-1.jpg" },
+  { id: 52, category: "land", title: "Dual-Frontage Lot", location: "Pearblossom, CA", image: "/photos/land-pearblossom-3.jpg" },
+  { id: 53, category: "land", title: "Roadfront Acreage", location: "Apple Valley, CA", image: "/photos/land-applevalley-2.jpg" },
+  { id: 54, category: "land", title: "Parcel Overview", location: "Pearblossom, CA", image: "/photos/land-pearblossom-4.jpg" },
+  { id: 55, category: "land", title: "Open Land Frontage", location: "Hinkley, CA", image: "/photos/land-hinkley-2.jpg" },
 ];
 
 export function portfolioByCategory(category: PortfolioCategory): PortfolioItem[] {

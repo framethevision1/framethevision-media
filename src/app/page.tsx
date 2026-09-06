@@ -50,7 +50,7 @@ const services = [
     description:
       "Aerial photography, cinematic flyover video, traced property lines, and labeled roads that give buyers confidence to pull the trigger.",
     href: "/services/drone",
-    images: ["/photos/drone-smoke-tree-1.jpg", "/photos/drone-phelan-1.jpg", "/photos/drone-smoke-tree-2.jpg", "/photos/drone-phelan-2.jpg"],
+    images: ["/photos/land-pearblossom-1.jpg", "/photos/land-pearblossom-3.jpg", "/photos/land-applevalley-1.jpg", "/photos/land-hinkley-1.jpg"],
   },
   {
     icon: Sparkles,

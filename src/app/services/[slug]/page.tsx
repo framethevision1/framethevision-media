@@ -36,6 +36,8 @@ export default async function ServicePage({
   const Icon = service.icon;
   const galleryItems = portfolioByCategory(service.category as PortfolioCategory);
   const heroImages = galleryItems.slice(0, 6).map((i) => ({ src: i.image, alt: i.title }));
+  // Aerial (property drone shots) shown as an add-on gallery on the Photography page.
+  const aerialItems = slug === "photography" ? portfolioByCategory("aerial") : [];
 
   return (
     <>
@@ -147,6 +149,28 @@ export default async function ServicePage({
           )}
         </div>
       </section>
+
+      {/* Aerial add-on gallery - Photography only */}
+      {aerialItems.length > 0 && (
+        <section className="py-24 bg-cream border-t border-cream-dark">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              tag="Aerial Add-On"
+              title="See It From Above"
+              description="Add drone aerials to any shoot — show off the lot, the neighborhood, and the views that ground-level photos can't capture."
+            />
+            <div className="mt-16">
+              <GalleryLightbox
+                items={aerialItems.map((i) => ({
+                  src: i.image,
+                  title: i.title,
+                  subtitle: i.location,
+                }))}
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Enhance Your Shoot - Photography only */}
       {slug === "photography" && (

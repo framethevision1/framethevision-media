@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Camera, Video, Plane, Box } from "lucide-react";
+import { Camera, Video, Plane, Box, Map } from "lucide-react";
 import GalleryLightbox from "@/components/GalleryLightbox";
 import {
   portfolioItems,
@@ -17,7 +17,8 @@ const filters: {
   { label: "All", value: "all" },
   { label: "Photography", value: "photo", icon: Camera },
   { label: "Video", value: "video", icon: Video },
-  { label: "Drone", value: "drone", icon: Plane },
+  { label: "Land", value: "land", icon: Map },
+  { label: "Aerial", value: "aerial", icon: Plane },
   { label: "3D Tours", value: "3d", icon: Box },
 ];
 
