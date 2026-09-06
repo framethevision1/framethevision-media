@@ -36,8 +36,6 @@ export default async function ServicePage({
   const Icon = service.icon;
   const galleryItems = portfolioByCategory(service.category as PortfolioCategory);
   const heroImages = galleryItems.slice(0, 6).map((i) => ({ src: i.image, alt: i.title }));
-  // Aerial (property drone shots) — included in the Pro package, shown on the Photography page.
-  const aerialItems = slug === "photography" ? portfolioByCategory("aerial") : [];
 
   return (
     <>
@@ -149,28 +147,6 @@ export default async function ServicePage({
           )}
         </div>
       </section>
-
-      {/* Aerial gallery (included in the Pro package) - Photography only */}
-      {aerialItems.length > 0 && (
-        <section className="py-24 bg-cream border-t border-cream-dark">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading
-              tag="Included in the Pro Package"
-              title="See It From Above"
-              description="Aerial drone photos come standard with our Pro package — capturing the full lot, the neighborhood, and the sweeping views that ground-level shots can't reach."
-            />
-            <div className="mt-16">
-              <GalleryLightbox
-                items={aerialItems.map((i) => ({
-                  src: i.image,
-                  title: i.title,
-                  subtitle: i.location,
-                }))}
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Enhance Your Shoot - Photography only */}
       {slug === "photography" && (
