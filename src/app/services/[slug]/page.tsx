@@ -130,11 +130,11 @@ export default async function ServicePage({
                 Coming Soon
               </p>
               <h3 className="text-2xl md:text-3xl font-bold text-brown">
-                Fresh Video Content in Production
+                {service.title} Coming Soon
               </h3>
               <p className="mt-4 max-w-xl text-gray-body">
-                We&apos;re putting the finishing touches on our latest property and
-                land tour videos. Check back soon to see them here.
+                We&apos;re putting the finishing touches on our latest work.
+                Check back soon to see it here.
               </p>
               <a
                 href="/book"

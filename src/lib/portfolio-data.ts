@@ -61,14 +61,6 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 45, category: "drone", title: "Neighborhood Aerial", location: "Hesperia, CA", image: "/photos/hesperia-aerial.jpg" },
   { id: 46, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/patricia-aerial.jpg" },
   { id: 47, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
-
-  // ---- 3D Virtual Tours (representative stills) ----
-  { id: 54, category: "3d", title: "3D Virtual Tour", location: "Oak Hills, CA", image: "/photos/joshua-family.jpg" },
-  { id: 55, category: "3d", title: "Kitchen 3D View", location: "Barstow, CA", image: "/photos/patricia-kitchen.jpg" },
-  { id: 56, category: "3d", title: "Living Space 3D", location: "Hesperia, CA", image: "/photos/hesperia-dining.jpg" },
-  { id: 57, category: "3d", title: "Bathroom Scan", location: "Oak Hills, CA", image: "/photos/joshua-bath.jpg" },
-  { id: 58, category: "3d", title: "Dining 3D View", location: "Oak Hills, CA", image: "/photos/joshua-dining.jpg" },
-  { id: 59, category: "3d", title: "Bedroom 3D Scan", location: "Barstow, CA", image: "/photos/patricia-bedroom.jpg" },
 ];
 
 export function portfolioByCategory(category: PortfolioCategory): PortfolioItem[] {
