@@ -149,8 +149,8 @@ export default async function ServicePage({
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
                 <BeforeAfterSlider
-                  beforeSrc="/photos/twilight-before.jpg"
-                  afterSrc="/photos/twilight-after.jpg"
+                  beforeSrc="/photos/twi-joshua-before.jpg"
+                  afterSrc="/photos/twi-joshua-after.jpg"
                   beforeLabel="Daytime"
                   afterLabel="Virtual Twilight"
                 />
