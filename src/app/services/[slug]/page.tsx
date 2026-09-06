@@ -51,6 +51,15 @@ export default async function ServicePage({
           >
             <source src={service.heroVideo} type="video/mp4" />
           </video>
+        ) : slug === "photography" ? (
+          <Image
+            src="/photos/patricia-kitchen.jpg"
+            alt="Renovated marble kitchen in Barstow, CA by Frame The Vision"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
         ) : (
           <HeroSlideshow images={heroImages} interval={5000} />
         )}
