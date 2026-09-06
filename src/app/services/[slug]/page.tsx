@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Moon, Sofa, Eraser } from "lucide-react";
+import { ArrowRight, Moon, Sofa, Eraser } from "lucide-react";
 import { servicesData, type ServiceSlug } from "@/lib/services-data";
 import { portfolioByCategory, type PortfolioCategory } from "@/lib/portfolio-data";
 import SectionHeading from "@/components/SectionHeading";
@@ -110,33 +110,6 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeading
-            tag="What's Included"
-            title="Everything You Get"
-          />
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {service.features.map((feature, i) => (
-              <div key={i} className="flex items-center gap-3 text-left">
-                <Check className="w-5 h-5 text-gold flex-shrink-0" />
-                <span className="text-brown">{feature}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <a
-              href="/book"
-              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-            >
-              Book Now
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Enhance Your Shoot - Photography only */}
       {slug === "photography" && (
         <section className="py-24 bg-cream">
@@ -222,6 +195,15 @@ export default async function ServicePage({
                   </span>
                 </Link>
               </div>
+            </div>
+            <div className="mt-12 text-center">
+              <Link
+                href="/addons"
+                className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
+              >
+                View All A La Carte Add-Ons
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
