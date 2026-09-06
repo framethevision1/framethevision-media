@@ -31,7 +31,7 @@ export const servicesData = {
     description:
       "MLS walkthrough tours, agent-branded videos, and key delivery content — professionally shot and edited with music, transitions, and motion graphics that make you and your listings unforgettable.",
     heroImage: "/photos/kitchen-living.jpg",
-    heroVideo: "/photos/hero-video.mp4",
+    heroVideo: "/photos/land-hero.mp4",
     heroStat: { value: "403%", label: "More Inquiries with Video", source: "Domain.com.au" },
     features: [
       "Standard MLS property walkthrough tours",
