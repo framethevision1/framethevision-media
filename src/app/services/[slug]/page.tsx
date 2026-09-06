@@ -53,8 +53,8 @@ export default async function ServicePage({
           </video>
         ) : slug === "photography" ? (
           <Image
-            src="/photos/patricia-kitchen.jpg"
-            alt="Renovated marble kitchen in Barstow, CA by Frame The Vision"
+            src="/photos/joshua-nook.jpg"
+            alt="Breakfast nook with pool view in Oak Hills, CA by Frame The Vision"
             fill
             priority
             sizes="100vw"
