@@ -16,7 +16,7 @@ export default function AddOnsPage() {
       {/* Hero */}
       <section className="relative min-h-[40vh] flex items-end overflow-hidden">
         <Image
-          src="/photos/twilight-after.jpg"
+          src="/photos/twi-joshua-after.jpg"
           alt="A La Carte Add-Ons"
           fill
           className="object-cover"
@@ -43,8 +43,8 @@ export default function AddOnsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <BeforeAfterSlider
-                beforeSrc="/photos/twilight-before.jpg"
-                afterSrc="/photos/twilight-after.jpg"
+                beforeSrc="/photos/twi-joshua-before.jpg"
+                afterSrc="/photos/twi-joshua-after.jpg"
                 beforeLabel="Daytime"
                 afterLabel="Virtual Twilight"
               />
@@ -271,7 +271,7 @@ export default function AddOnsPage() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="/photos/twilight-after.jpg"
+          src="/photos/twi-joshua-after.jpg"
           alt=""
           fill
           className="object-cover"

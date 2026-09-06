@@ -58,7 +58,7 @@ const services = [
     description:
       "Virtual twilight, virtual staging, 2D floor plans, and 3D virtual tours. Enhance any shoot with extras that make listings unforgettable.",
     href: "/addons",
-    images: ["/photos/twilight-after.jpg", "/photos/twilight-before.jpg", "/photos/bedroom.jpg", "/photos/front-exterior.jpg"],
+    images: ["/photos/twi-joshua-after.jpg", "/photos/twi-joshua-before.jpg", "/photos/bedroom.jpg", "/photos/front-exterior.jpg"],
   },
 ];
 
