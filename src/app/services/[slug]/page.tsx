@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Moon, Sofa } from "lucide-react";
+import { ArrowRight, Check, Moon, Sofa, Eraser } from "lucide-react";
 import { servicesData, type ServiceSlug } from "@/lib/services-data";
 import { portfolioByCategory, type PortfolioCategory } from "@/lib/portfolio-data";
 import SectionHeading from "@/components/SectionHeading";
@@ -146,7 +146,7 @@ export default async function ServicePage({
               title="Take Your Photos Even Further"
               description="Every photo shoot includes 1 free virtual twilight and 1 free virtual staging. Need more? Add them for a small fee."
             />
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
                 <BeforeAfterSlider
                   beforeSrc="/photos/twilight-before.jpg"
@@ -190,6 +190,32 @@ export default async function ServicePage({
                   </div>
                   <p className="text-sm text-gray-body">
                     Turn empty rooms into beautifully furnished spaces. Additional rooms just $30 each.
+                  </p>
+                  <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                    See Examples <ArrowRight className="ml-1 w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+
+              <div className="hover:-translate-y-2 hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <BeforeAfterSlider
+                  beforeSrc="/photos/declutter-before.jpg"
+                  afterSrc="/photos/declutter-after.jpg"
+                  beforeLabel="Cluttered"
+                  afterLabel="De-Cluttered"
+                  beforeIcon="boxes"
+                  afterIcon="sparkles"
+                />
+                <Link href="/addons/de-clutter" className="block p-6 bg-cream border border-cream-dark border-t-0 rounded-b-2xl group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Eraser className="w-5 h-5 text-gold" />
+                    <h3 className="text-lg font-bold text-brown">De-Clutter</h3>
+                    <span className="px-3 py-1 rounded-full bg-gold/10 text-xs font-medium text-gold">
+                      $25 per photo
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-body">
+                    Digitally remove boxes, clutter, and personal items so rooms look clean, spacious, and move-in ready.
                   </p>
                   <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
                     See Examples <ArrowRight className="ml-1 w-4 h-4" />
