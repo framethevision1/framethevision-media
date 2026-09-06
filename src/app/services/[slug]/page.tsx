@@ -99,15 +99,19 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Gallery — only when this service has real work to show */}
-      {galleryItems.length > 0 && (
-        <section className="py-24 bg-cream">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading
-              tag="Gallery"
-              title="See Our Work"
-              description="Real results from real shoots across the High Desert."
-            />
+      {/* Gallery — real work if we have it, otherwise a "coming soon" placeholder */}
+      <section className="py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            tag="Gallery"
+            title="See Our Work"
+            description={
+              galleryItems.length > 0
+                ? "Real results from real shoots across the High Desert."
+                : undefined
+            }
+          />
+          {galleryItems.length > 0 ? (
             <div className="mt-16">
               <GalleryLightbox
                 items={galleryItems.map((i) => ({
@@ -117,9 +121,32 @@ export default async function ServicePage({
                 }))}
               />
             </div>
-          </div>
-        </section>
-      )}
+          ) : (
+            <div className="mt-12 flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-gold/40 px-8 py-20 text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6">
+                <Icon className="w-8 h-8 text-gold" />
+              </div>
+              <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-3">
+                Coming Soon
+              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-brown">
+                Fresh Video Content in Production
+              </h3>
+              <p className="mt-4 max-w-xl text-gray-body">
+                We&apos;re putting the finishing touches on our latest property and
+                land tour videos. Check back soon to see them here.
+              </p>
+              <a
+                href="/book"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
+              >
+                Book Your Shoot
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Enhance Your Shoot - Photography only */}
       {slug === "photography" && (
