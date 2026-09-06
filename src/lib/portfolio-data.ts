@@ -62,14 +62,6 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 46, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/patricia-aerial.jpg" },
   { id: 47, category: "drone", title: "Aerial Property View", location: "Barstow, CA", image: "/photos/barstow-aerial.jpg" },
 
-  // ---- Video Tours & Branding (representative stills from real shoots) ----
-  { id: 48, category: "video", title: "Property Video Tour", location: "Barstow, CA", image: "/photos/patricia-kitchen.jpg" },
-  { id: 49, category: "video", title: "Walkthrough Tour", location: "Oak Hills, CA", image: "/photos/joshua-family.jpg" },
-  { id: 50, category: "video", title: "Cinematic Listing Video", location: "Barstow, CA", image: "/photos/patricia-exterior.jpg" },
-  { id: 51, category: "video", title: "Interior Walkthrough", location: "Hesperia, CA", image: "/photos/hesperia-dining.jpg" },
-  { id: 52, category: "video", title: "Bedroom Walkthrough", location: "Barstow, CA", image: "/photos/patricia-bedroom.jpg" },
-  { id: 53, category: "video", title: "Branded Property Video", location: "Oak Hills, CA", image: "/photos/joshua-exterior.jpg" },
-
   // ---- 3D Virtual Tours (representative stills) ----
   { id: 54, category: "3d", title: "3D Virtual Tour", location: "Oak Hills, CA", image: "/photos/joshua-family.jpg" },
   { id: 55, category: "3d", title: "Kitchen 3D View", location: "Barstow, CA", image: "/photos/patricia-kitchen.jpg" },

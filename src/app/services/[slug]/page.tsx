@@ -99,25 +99,27 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            tag="Gallery"
-            title="See Our Work"
-            description="Real results from real shoots across the High Desert."
-          />
-          <div className="mt-16">
-            <GalleryLightbox
-              items={galleryItems.map((i) => ({
-                src: i.image,
-                title: i.title,
-                subtitle: i.location,
-              }))}
+      {/* Gallery — only when this service has real work to show */}
+      {galleryItems.length > 0 && (
+        <section className="py-24 bg-cream">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              tag="Gallery"
+              title="See Our Work"
+              description="Real results from real shoots across the High Desert."
             />
+            <div className="mt-16">
+              <GalleryLightbox
+                items={galleryItems.map((i) => ({
+                  src: i.image,
+                  title: i.title,
+                  subtitle: i.location,
+                }))}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Enhance Your Shoot - Photography only */}
       {slug === "photography" && (

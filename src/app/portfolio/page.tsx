@@ -33,6 +33,11 @@ export default function PortfolioPage() {
         )
       : portfolioItems.filter((item) => item.category === active);
 
+  // Only show category tabs that actually have work (plus "All").
+  const availableFilters = filters.filter(
+    (f) => f.value === "all" || portfolioItems.some((item) => item.category === f.value)
+  );
+
   return (
     <>
       {/* Hero with Photo Background */}
@@ -66,7 +71,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {filters.map((f) => (
+            {availableFilters.map((f) => (
               <button
                 key={f.value}
                 onClick={() => setActive(f.value)}
