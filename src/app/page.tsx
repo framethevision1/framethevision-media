@@ -210,8 +210,8 @@ export default function Home() {
       {/* Hero with Video Background */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <HeroSlideshow images={heroImages} interval={5000} />
-        <div className="absolute inset-0 bg-black/50 z-30" />
-        <div className="relative z-40 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-6">
               Victorville, CA &bull; High Desert

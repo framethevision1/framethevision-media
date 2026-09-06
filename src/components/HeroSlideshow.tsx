@@ -27,7 +27,10 @@ export default function HeroSlideshow({
   const previous = (current - 1 + images.length) % images.length;
 
   return (
-    <>
+    // `isolate` keeps the images' z-index self-contained, so the slideshow can
+    // never paint over a hero's overlay or text — the crossfade layering stays
+    // scoped to this wrapper on every page that uses it.
+    <div className="absolute inset-0 isolate">
       {images.map((img, i) => {
         const layer =
           i === current
@@ -47,6 +50,6 @@ export default function HeroSlideshow({
           />
         );
       })}
-    </>
+    </div>
   );
 }
