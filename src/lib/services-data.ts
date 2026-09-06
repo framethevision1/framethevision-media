@@ -56,7 +56,7 @@ export const servicesData = {
     description:
       "Land doesn't sell itself — but the right visuals do. Aerial photography, cinematic flyover video, traced property lines, and labeled access roads that give buyers the confidence to pull the trigger. FAA Part 107 certified.",
     heroImage: "/photos/silverlakes-aerial.jpg",
-    heroVideo: "/photos/drone-hero-video.mp4",
+    heroVideo: "/photos/drone-land-hero.mp4",
     heroStat: { value: "68%", label: "Faster Sales with Drone", source: "MLS / Inman" },
     features: [
       "High-resolution aerial photography",
