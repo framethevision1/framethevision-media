@@ -23,7 +23,7 @@ export default function AddOnsPage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
-        <div className="relative mx-auto px-8 sm:px-12 lg:px-20 pt-40 pb-12">
+        <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-40 pb-12">
           <p className="text-gold text-sm font-semibold uppercase tracking-widest mb-4">
             A La Carte
           </p>
@@ -37,60 +37,38 @@ export default function AddOnsPage() {
         </div>
       </section>
 
-      {/* Virtual Twilight */}
-      <section className="py-12 bg-cream">
-        <div className="mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+      {/* Add-on cards */}
+      <section className="py-16 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Virtual Twilight */}
+            <div className="rounded-2xl overflow-hidden border border-cream-dark bg-white/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
               <BeforeAfterSlider
                 beforeSrc="/photos/twi-joshua-before.jpg"
                 afterSrc="/photos/twi-joshua-after.jpg"
                 beforeLabel="Daytime"
                 afterLabel="Virtual Twilight"
               />
-            </div>
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                  <Moon className="w-6 h-6 text-gold" />
+              <Link href="/addons/virtual-twilight" className="block p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <Moon className="w-5 h-5 text-gold" />
+                  <h3 className="text-lg font-bold text-brown">Virtual Twilight</h3>
+                  <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
+                    1 FREE with every shoot
+                  </span>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
-                  1 FREE with every shoot
+                <p className="text-sm text-gray-body leading-relaxed">
+                  Transform any daytime exterior into a stunning twilight shot —
+                  dramatic skies and warm glowing windows.
+                </p>
+                <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                  See Examples <ArrowRight className="ml-1 w-4 h-4" />
                 </span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brown">
-                Virtual Twilight
-              </h2>
-              <p className="mt-6 text-gray-body leading-relaxed text-lg">
-                Transform any daytime exterior into a stunning twilight shot —
-                dramatic skies, warm glowing windows, and the curb appeal that
-                stops the scroll.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  View Pricing & Book
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <Link
-                  href="/addons/virtual-twilight"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
-                >
-                  See Examples
-                </Link>
-              </div>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Virtual Staging */}
-      <section className="py-12 bg-cream">
-        <div className="mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="lg:order-2">
+            {/* Virtual Staging */}
+            <div className="rounded-2xl overflow-hidden border border-cream-dark bg-white/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
               <BeforeAfterSlider
                 beforeSrc="/photos/staging-before.jpg"
                 afterSrc="/photos/staging-after.jpg"
@@ -99,49 +77,26 @@ export default function AddOnsPage() {
                 beforeIcon="boxes"
                 afterIcon="sparkles"
               />
-            </div>
-            <div className="lg:order-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                  <Sofa className="w-6 h-6 text-gold" />
+              <Link href="/addons/virtual-staging" className="block p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <Sofa className="w-5 h-5 text-gold" />
+                  <h3 className="text-lg font-bold text-brown">Virtual Staging</h3>
+                  <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
+                    1 FREE with every shoot
+                  </span>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-green-500/10 text-xs font-medium text-green-600">
-                  1 FREE with every shoot
+                <p className="text-sm text-gray-body leading-relaxed">
+                  Turn empty rooms into beautifully furnished spaces buyers can
+                  picture themselves living in.
+                </p>
+                <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                  See Examples <ArrowRight className="ml-1 w-4 h-4" />
                 </span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brown">
-                Virtual Staging
-              </h2>
-              <p className="mt-6 text-gray-body leading-relaxed text-lg">
-                Turn empty rooms into beautifully furnished spaces that help
-                buyers picture themselves living there. Multiple design styles
-                available.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  View Pricing & Book
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <Link
-                  href="/addons/virtual-staging"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
-                >
-                  See Examples
-                </Link>
-              </div>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* De-Clutter */}
-      <section className="py-12 bg-cream">
-        <div className="mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+            {/* De-Clutter */}
+            <div className="rounded-2xl overflow-hidden border border-cream-dark bg-white/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
               <BeforeAfterSlider
                 beforeSrc="/photos/declutter-before.jpg"
                 afterSrc="/photos/declutter-after.jpg"
@@ -150,119 +105,77 @@ export default function AddOnsPage() {
                 beforeIcon="boxes"
                 afterIcon="sparkles"
               />
-            </div>
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                  <Eraser className="w-6 h-6 text-gold" />
+              <Link href="/addons/de-clutter" className="block p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <Eraser className="w-5 h-5 text-gold" />
+                  <h3 className="text-lg font-bold text-brown">De-Clutter</h3>
+                  <span className="px-3 py-1 rounded-full bg-gold/10 text-xs font-medium text-gold">
+                    $25 per photo
+                  </span>
                 </div>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brown">
-                De-Clutter
-              </h2>
-              <p className="mt-6 text-gray-body leading-relaxed text-lg">
-                Digitally remove clutter, boxes, and personal items so rooms look
-                clean, spacious, and move-in ready — no heavy lifting required.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  View Pricing & Book
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <Link
-                  href="/addons/de-clutter"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-brown/20 px-8 py-4 text-base font-semibold text-brown hover:border-gold hover:text-gold transition-colors"
-                >
-                  See Examples
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2D Floor Plan */}
-      <section className="py-12 bg-cream">
-        <div className="mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src="/photos/kitchen-living.jpg"
-                alt="2D Floor Plan"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                  <Map className="w-6 h-6 text-gold" />
-                </div>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brown">
-                2D Floor Plan
-              </h2>
-              <p className="mt-6 text-gray-body leading-relaxed text-lg">
-                Detailed, professionally drawn floor plans that give buyers a
-                clear understanding of the layout, room sizes, and flow of the
-                property.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  View Pricing & Book
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3D Virtual Tour */}
-      <section className="py-12 bg-cream">
-        <div className="mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="lg:order-2 relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src="/photos/entrance-room.jpg"
-                alt="3D Virtual Tour"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute top-4 left-4 px-4 py-2 rounded-full bg-green-500/20 backdrop-blur-sm">
-                <span className="text-sm font-medium text-green-300">
-                  SAVE $40 — Only $85 with any package
+                <p className="text-sm text-gray-body leading-relaxed">
+                  Digitally remove clutter, boxes, and personal items so rooms
+                  look clean, spacious, and move-in ready.
+                </p>
+                <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                  See Examples <ArrowRight className="ml-1 w-4 h-4" />
                 </span>
-              </div>
+              </Link>
             </div>
-            <div className="lg:order-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                  <Box className="w-6 h-6 text-gold" />
+
+            {/* 2D Floor Plan */}
+            <div className="rounded-2xl overflow-hidden border border-cream-dark bg-white/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/photos/kitchen-living.jpg"
+                  alt="2D Floor Plan"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <Link href="/pricing" className="block p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <Map className="w-5 h-5 text-gold" />
+                  <h3 className="text-lg font-bold text-brown">2D Floor Plan</h3>
+                </div>
+                <p className="text-sm text-gray-body leading-relaxed">
+                  Professionally drawn floor plans that show buyers the layout,
+                  room sizes, and flow of the property.
+                </p>
+                <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                  View Pricing <ArrowRight className="ml-1 w-4 h-4" />
+                </span>
+              </Link>
+            </div>
+
+            {/* 3D Virtual Tour */}
+            <div className="rounded-2xl overflow-hidden border border-cream-dark bg-white/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/photos/entrance-room.jpg"
+                  alt="3D Virtual Tour"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-green-500/20 backdrop-blur-sm">
+                  <span className="text-xs font-medium text-green-300">
+                    SAVE $40 — $85 with any package
+                  </span>
                 </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brown">
-                3D Virtual Tour
-              </h2>
-              <p className="mt-6 text-gray-body leading-relaxed text-lg">
-                Interactive 3D walkthrough experiences that let buyers explore
-                every room from anywhere. Available 24/7 — no appointment needed.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
-                >
-                  View Pricing & Book
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </div>
+              <Link href="/pricing" className="block p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <Box className="w-5 h-5 text-gold" />
+                  <h3 className="text-lg font-bold text-brown">3D Virtual Tour</h3>
+                </div>
+                <p className="text-sm text-gray-body leading-relaxed">
+                  Interactive 3D walkthroughs that let buyers explore every room
+                  from anywhere, 24/7 — no appointment needed.
+                </p>
+                <span className="mt-3 inline-flex items-center text-sm font-medium text-gold">
+                  View Pricing <ArrowRight className="ml-1 w-4 h-4" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -277,7 +190,7 @@ export default function AddOnsPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative mx-auto px-8 sm:px-12 lg:px-20 text-center">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Build Your Perfect Package
           </h2>
